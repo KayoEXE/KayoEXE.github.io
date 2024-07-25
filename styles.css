@@ -1,0 +1,288 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #fff; /* Cor de fundo padrão branca */
+}
+
+/* Navbar fixa */
+.navbar {
+    background-color: #010212; /* Cor de fundo da navbar */
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px; /* Altura da navbar */
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    margin-bottom: 0; /* Remove a margem abaixo da navbar */
+}
+
+/* Container da Navbar */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto; /* Centraliza o container */
+}
+
+/* Estilo da logo e texto */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 45px; /* Altura da imagem do logo */
+    width: auto;
+    margin-right: 10px; /* Espaço entre a logo e o texto */
+}
+
+.logo-text {
+    font-family: 'Arial Black', Arial, sans-serif;
+    font-size: 24px; /* Tamanho da fonte do nome */
+    font-weight: bold; /* Torna o texto mais grosso */
+    display: flex;
+    align-items: center;
+}
+
+.master {
+    color: #423C54; /* Cor para 'Master' */
+}
+
+.pag {
+    color: #131848; /* Cor para 'Pag' */
+}
+
+/* Links da navbar */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #2a2b5c; /* Cor ao passar o mouse */
+}
+
+/* Seção inicial com fundo branco */
+.hero-section {
+    min-height: 100vh; /* Altura mínima igual à altura da viewport */
+    background-color: #fff; /* Cor de fundo branca */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Adiciona algum espaçamento */
+    padding-top: 80px; /* Ajusta o espaço superior para evitar sobreposição com a navbar */
+    position: relative;
+    text-align: center; /* Alinha o texto centralmente dentro da seção */
+    z-index: 1;
+}
+
+/* Ajusta o conteúdo da seção hero */
+.hero-content {
+    display: flex;
+    align-items: center; /* Alinha o conteúdo verticalmente */
+    gap: 10px; /* Ajusta o espaço entre o texto e o cartão */
+    max-width: 90%; /* Limita a largura do conteúdo */
+    width: 100%; /* Garante que o conteúdo use toda a largura disponível */
+    margin-top: 60px; /* Adiciona espaço entre a navbar e o conteúdo */
+}
+
+/* Ajusta o texto do lado esquerdo */
+.hero-text {
+    flex: 1; /* Faz com que o texto ocupe 1 parte do espaço */
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-bottom: 30px; /* Espaço abaixo do texto */
+}
+
+/* Estilo do cartão de crédito e do texto "Clique" */
+.card-and-click {
+    display: flex;
+    align-items: center; /* Alinha o texto e o cartão verticalmente */
+    position: relative; /* Necessário para o posicionamento do texto "Clique" */
+}
+
+.card-container {
+    display: flex;
+    justify-content: center; /* Centraliza o cartão horizontalmente */
+    align-items: center; /* Alinha o cartão verticalmente */
+}
+
+.card {
+    position: relative;
+    width: 300px; /* Largura do cartão */
+    height: 200px; /* Altura do cartão */
+    perspective: 1000px; /* Adiciona profundidade ao cartão */
+    transition: transform 0.6s; /* Transição suave para rotação */
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-front {
+    background: #fff;
+}
+
+.card-back {
+    background: #f1f1f1;
+    transform: rotateY(180deg);
+}
+
+.card.flip .card-front {
+    transform: rotateY(180deg);
+}
+
+.card.flip .card-back {
+    transform: rotateY(0deg);
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Garante que a imagem não seja cortada */
+    border-radius: 10px; /* Cantos arredondados */
+}
+
+/* Texto "Clique" posicionado ao lado direito do cartão */
+.click-text {
+    font-size: 16px; /* Tamanho da fonte do texto "Clique" */
+    color: #000; /* Cor do texto */
+    position: absolute; /* Posiciona o texto ao lado do cartão */
+    right: -30px; /* Ajusta a posição do texto para colar no cartão */
+    top: 50%; /* Centraliza o texto verticalmente em relação ao cartão */
+    transform: translateY(-50%); /* Ajusta a posição vertical do texto */
+    writing-mode: vertical-rl; /* Orienta o texto verticalmente */
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+/* Ajustes para conteúdo */
+section {
+    padding: 80px 20px; /* Espaçamento do topo */
+    background-color: #fff; /* Fundo branco para o conteúdo */
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column; /* Alinha o conteúdo em coluna em telas menores */
+        align-items: center; /* Centraliza o conteúdo */
+        gap: 10px; /* Diminui o espaço entre o texto e o cartão */
+        margin-top: 80px; /* Adiciona espaço entre a navbar e o conteúdo */
+    }
+
+    .hero-text {
+        margin-bottom: 10px; /* Reduz o espaço entre o texto e o cartão */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .card-container {
+        display: flex;
+        justify-content: center; /* Centraliza o cartão horizontalmente */
+        align-items: center; /* Alinha o cartão verticalmente */
+    }
+
+    .card-and-click {
+        flex-direction: column; /* Alinha o texto e o cartão verticalmente */
+        align-items: center; /* Centraliza o conteúdo */
+        margin-left: 0; /* Remove a margem para centralizar */
+    }
+
+    .click-text {
+        position: static; /* Remove o posicionamento absoluto */
+        margin-top: 5px; /* Adiciona espaço acima do texto */
+        writing-mode: horizontal-tb; /* Ajusta o texto para orientação horizontal */
+        text-align: center; /* Centraliza o texto */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        height: 50px; /* Altura reduzida para telas menores */
+    }
+    .logo-img {
+        height: 35px; /* Tamanho reduzido da logo */
+    }
+    .logo-text {
+        font-size: 20px; /* Tamanho reduzido da fonte */
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .hero-section {
+        padding-top: 100px; /* Ajusta o padding-top para telas pequenas */
+        margin-top: 0; /* Garante que o padding-top seja aplicado sem conflito */
+    }
+    .hero-content {
+        padding-top: 60px; /* Ajusta o padding-top para adicionar mais espaço em telas pequenas */
+        margin-top: 0; /* Garante que o margin-top não conflite com o padding */
+    }
+    .card {
+        width: 260px; /* Largura aumentada do cartão */
+        height: 180px; /* Altura aumentada do cartão */
+    }
+    .click-text {
+        font-size: 14px; /* Tamanho reduzido do texto "Clique" */
+        right: -20px; /* Ajusta a posição do texto ao lado do cartão */
+    }
+}
+
+@media (max-width: 390px) {
+    .hero-section {
+        padding-top: 20px; /* Ajusta o padding-top para adicionar um pequeno espaço acima do texto */
+    }
+
+    .hero-text {
+        font-size: 18px; /* Reduz o tamanho da fonte do texto */
+        margin-bottom: 10px; /* Ajusta a margem abaixo do texto */
+    }
+
+    .card {
+        width: 240px; /* Largura reduzida do cartão */
+        height: 160px; /* Altura reduzida do cartão */
+    }
+
+    .click-text {
+        font-size: 12px; /* Tamanho reduzido do texto "Clique" */
+        right: -10px; /* Ajusta a posição do texto ao lado do cartão */
+    }
+}

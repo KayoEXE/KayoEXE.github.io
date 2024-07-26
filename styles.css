@@ -1,4 +1,3 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -107,7 +106,6 @@ body {
     gap: 10px; /* Ajusta o espaço entre o texto e o cartão */
     max-width: 90%; /* Limita a largura do conteúdo */
     width: 100%; /* Garante que o conteúdo use toda a largura disponível */
-    margin-top: 60px; /* Adiciona espaço entre a navbar e o conteúdo */
 }
 
 /* Ajusta o texto do lado esquerdo */
@@ -133,7 +131,7 @@ body {
 .card {
     position: relative;
     width: 300px; /* Largura do cartão */
-    height: 200px; /* Altura do cartão */
+    height: 220px; /* Altura do cartão */
     perspective: 1000px; /* Adiciona profundidade ao cartão */
     transition: transform 0.6s; /* Transição suave para rotação */
 }
@@ -206,7 +204,6 @@ p {
         flex-direction: column; /* Alinha o conteúdo em coluna em telas menores */
         align-items: center; /* Centraliza o conteúdo */
         gap: 10px; /* Diminui o espaço entre o texto e o cartão */
-        margin-top: 80px; /* Adiciona espaço entre a navbar e o conteúdo */
     }
 
     .hero-text {
@@ -242,23 +239,22 @@ p {
         height: 35px; /* Tamanho reduzido da logo */
     }
     .logo-text {
-        font-size: 20px; /* Tamanho reduzido da fonte */
+        font-size: 22px; /* Tamanho reduzido da fonte */
     }
     .nav-links {
         flex-direction: column;
         gap: 5px;
     }
     .hero-section {
-        padding-top: 100px; /* Ajusta o padding-top para telas pequenas */
-        margin-top: 0; /* Garante que o padding-top seja aplicado sem conflito */
+        padding-top: 20px; /* Reduz o padding-top para adicionar mais espaço em telas pequenas */
     }
     .hero-content {
-        padding-top: 60px; /* Ajusta o padding-top para adicionar mais espaço em telas pequenas */
+        padding-top: 0; /* Remove o padding-top para evitar conflito com a centralização */
         margin-top: 0; /* Garante que o margin-top não conflite com o padding */
     }
     .card {
-        width: 260px; /* Largura aumentada do cartão */
-        height: 180px; /* Altura aumentada do cartão */
+        width: 280px; /* Largura ajustada do cartão */
+        height: 200px; /* Altura ajustada do cartão */
     }
     .click-text {
         font-size: 14px; /* Tamanho reduzido do texto "Clique" */
@@ -266,23 +262,37 @@ p {
     }
 }
 
-@media (max-width: 390px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     .hero-section {
-        padding-top: 20px; /* Ajusta o padding-top para adicionar um pequeno espaço acima do texto */
+        padding-top: 40px; /* Ajusta o padding-top para telas médias */
     }
-
+    .hero-content {
+        padding-top: 0; /* Remove o padding-top adicional */
+    }
     .hero-text {
-        font-size: 18px; /* Reduz o tamanho da fonte do texto */
-        margin-bottom: 10px; /* Ajusta a margem abaixo do texto */
+        text-align: center; /* Centraliza o texto para tablets */
     }
-
     .card {
-        width: 240px; /* Largura reduzida do cartão */
-        height: 160px; /* Altura reduzida do cartão */
+        width: 320px; /* Largura maior do cartão */
+        height: 240px; /* Altura maior do cartão */
     }
+}
 
-    .click-text {
-        font-size: 12px; /* Tamanho reduzido do texto "Clique" */
-        right: -10px; /* Ajusta a posição do texto ao lado do cartão */
+@media (min-width: 1024px) {
+    .hero-section {
+        padding-top: 60px; /* Ajusta o padding-top para desktops */
+    }
+    .hero-content {
+        flex-direction: row; /* Mantém o conteúdo em linha para telas grandes */
+        align-items: flex-start; /* Alinha o conteúdo no início */
+        padding-top: 0; /* Remove o padding-top adicional */
+    }
+    .hero-text {
+        text-align: left; /* Alinha o texto à esquerda para telas grandes */
+        margin-right: 30px; /* Adiciona espaço à direita do texto */
+    }
+    .card {
+        width: 350px; /* Largura maior do cartão */
+        height: 260px; /* Altura maior do cartão */
     }
 }

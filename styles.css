@@ -56,11 +56,11 @@ body {
 }
 
 .master {
-    color: #423C54; /* Cor para 'Master' */
+    color: #ab98da; /* Cor para 'Master' */
 }
 
 .pag {
-    color: #131848; /* Cor para 'Pag' */
+    color: #2d3bb8; /* Cor para 'Pag' */
 }
 
 /* Links da navbar */
@@ -154,7 +154,7 @@ body {
 }
 
 .card-back {
-    background: #f1f1f1;
+    background: #fff; /* Remover o fundo cinza e definir como branco */
     transform: rotateY(180deg);
 }
 

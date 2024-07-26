@@ -1,4 +1,3 @@
-/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -103,28 +102,25 @@ body {
 /* Ajusta o conteúdo da seção hero */
 .hero-content {
     display: flex;
-    flex-direction: column; /* Alinha o conteúdo em coluna */
-    justify-content: center; /* Centraliza o conteúdo verticalmente */
-    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Alinha o conteúdo verticalmente */
     gap: 10px; /* Ajusta o espaço entre o texto e o cartão */
     max-width: 90%; /* Limita a largura do conteúdo */
     width: 100%; /* Garante que o conteúdo use toda a largura disponível */
-    margin-top: 0; /* Remove a margem superior para centralizar melhor o conteúdo */
-    min-height: 70vh; /* Garante que o conteúdo fique centralizado verticalmente */
+    margin-top: 60px; /* Adiciona espaço entre a navbar e o conteúdo */
 }
 
 /* Ajusta o texto do lado esquerdo */
 .hero-text {
-    text-align: center; /* Centraliza o texto */
-    margin-bottom: 20px; /* Espaço abaixo do texto */
+    flex: 1; /* Faz com que o texto ocupe 1 parte do espaço */
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-bottom: 30px; /* Espaço abaixo do texto */
 }
 
 /* Estilo do cartão de crédito e do texto "Clique" */
 .card-and-click {
     display: flex;
-    flex-direction: column; /* Alinha o texto e o cartão verticalmente */
-    align-items: center; /* Centraliza o conteúdo */
-    gap: 10px; /* Espaço entre o cartão e o texto "Clique" */
+    align-items: center; /* Alinha o texto e o cartão verticalmente */
+    position: relative; /* Necessário para o posicionamento do texto "Clique" */
 }
 
 .card-container {
@@ -181,10 +177,12 @@ body {
 .click-text {
     font-size: 16px; /* Tamanho da fonte do texto "Clique" */
     color: #000; /* Cor do texto */
-    position: static; /* Remove o posicionamento absoluto */
-    margin-top: 5px; /* Adiciona espaço acima do texto */
-    writing-mode: horizontal-tb; /* Ajusta o texto para orientação horizontal */
-    text-align: center; /* Centraliza o texto */
+    position: absolute; /* Posiciona o texto ao lado do cartão */
+    right: -30px; /* Ajusta a posição do texto para colar no cartão */
+    top: 50%; /* Centraliza o texto verticalmente em relação ao cartão */
+    transform: translateY(-50%); /* Ajusta a posição vertical do texto */
+    writing-mode: vertical-rl; /* Orienta o texto verticalmente */
+    text-align: center; /* Alinha o texto ao centro */
 }
 
 /* Ajustes para conteúdo */
@@ -204,16 +202,35 @@ p {
 /* Media Queries para responsividade */
 @media (max-width: 768px) {
     .hero-content {
-        min-height: 70vh; /* Garante que o conteúdo fique centralizado verticalmente */
-        margin-top: 0; /* Remove a margem superior para centralizar melhor o conteúdo */
+        flex-direction: column; /* Alinha o conteúdo em coluna em telas menores */
+        align-items: center; /* Centraliza o conteúdo */
+        gap: 10px; /* Diminui o espaço entre o texto e o cartão */
+        padding-top: 60px; /* Ajusta o padding-top para adicionar espaço em telas pequenas */
+        margin-top: 0; /* Garante que o margin-top não conflite com o padding */
     }
 
     .hero-text {
         margin-bottom: 10px; /* Reduz o espaço entre o texto e o cartão */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .card-container {
+        display: flex;
+        justify-content: center; /* Centraliza o cartão horizontalmente */
+        align-items: center; /* Alinha o cartão verticalmente */
     }
 
     .card-and-click {
-        gap: 10px; /* Ajusta o espaço entre o cartão e o texto "Clique" */
+        flex-direction: column; /* Alinha o texto e o cartão verticalmente */
+        align-items: center; /* Centraliza o conteúdo */
+        margin-left: 0; /* Remove a margem para centralizar */
+    }
+
+    .click-text {
+        position: static; /* Remove o posicionamento absoluto */
+        margin-top: 5px; /* Adiciona espaço acima do texto */
+        writing-mode: horizontal-tb; /* Ajusta o texto para orientação horizontal */
+        text-align: center; /* Centraliza o texto */
     }
 }
 
@@ -232,27 +249,31 @@ p {
         gap: 5px;
     }
     .hero-section {
-        padding-top: 80px; /* Ajusta o padding-top para telas pequenas */
-        margin-top: 0; /* Garante que o padding-top seja aplicado sem conflito */
+        padding-top: 20px; /* Ajusta o padding-top para adicionar espaço acima do texto */
+        display: flex;
+        justify-content: center; /* Centraliza o conteúdo horizontalmente */
+        align-items: center; /* Centraliza o conteúdo verticalmente */
     }
     .hero-content {
-        padding-top: 60px; /* Ajusta o padding-top para adicionar mais espaço em telas pequenas */
+        padding-top: 20px; /* Ajusta o padding-top para adicionar mais espaço em telas pequenas */
         margin-top: 0; /* Garante que o margin-top não conflite com o padding */
-        min-height: 60vh; /* Garante que o conteúdo fique centralizado verticalmente */
     }
     .card {
-        width: 260px; /* Largura ajustada do cartão */
-        height: 180px; /* Altura ajustada do cartão */
+        width: 260px; /* Largura do cartão ajustada */
+        height: 180px; /* Altura do cartão ajustada */
     }
     .click-text {
         font-size: 14px; /* Tamanho reduzido do texto "Clique" */
-        margin-top: 5px; /* Ajusta a posição do texto ao lado do cartão */
+        right: -20px; /* Ajusta a posição do texto ao lado do cartão */
     }
 }
 
 @media (max-width: 390px) {
     .hero-section {
         padding-top: 20px; /* Ajusta o padding-top para adicionar um pequeno espaço acima do texto */
+        display: flex;
+        justify-content: center; /* Centraliza o conteúdo horizontalmente */
+        align-items: center; /* Centraliza o conteúdo verticalmente */
     }
 
     .hero-text {
@@ -267,7 +288,7 @@ p {
 
     .click-text {
         font-size: 12px; /* Tamanho reduzido do texto "Clique" */
-        margin-top: 5px; /* Ajusta a posição do texto ao lado do cartão */
+        right: -10px; /* Ajusta a posição do texto ao lado do cartão */
     }
 }
 

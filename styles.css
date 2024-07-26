@@ -93,7 +93,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 20px; /* Adiciona algum espaçamento */
-    padding-top: 60px; /* Ajusta o espaço superior para evitar sobreposição com a navbar */
+    padding-top: 40px; /* Ajusta o espaço superior para evitar sobreposição com a navbar */
     position: relative;
     text-align: center; /* Alinha o texto centralmente dentro da seção */
     z-index: 1;
@@ -202,7 +202,7 @@ p {
 /* Media Queries para responsividade */
 @media (max-width: 768px) {
     .hero-section {
-        padding-top: 40px; /* Ajusta o padding-top para telas pequenas */
+        padding-top: 20px; /* Ajusta o padding-top para telas pequenas */
         display: flex;
         justify-content: center; /* Centraliza o conteúdo horizontalmente */
         align-items: center; /* Centraliza o conteúdo verticalmente */
@@ -255,7 +255,7 @@ p {
         gap: 5px;
     }
     .hero-section {
-        padding-top: 20px; /* Ajusta o padding-top para adicionar um pequeno espaço acima do texto */
+        padding-top: 20px; /* Ajusta o padding-top para telas pequenas */
         display: flex;
         justify-content: center; /* Centraliza o conteúdo horizontalmente */
         align-items: center; /* Centraliza o conteúdo verticalmente */
@@ -276,7 +276,7 @@ p {
 
 @media (max-width: 390px) {
     .hero-section {
-        padding-top: 20px; /* Ajusta o padding-top para adicionar um pequeno espaço acima do texto */
+        padding-top: 10px; /* Ajusta o padding-top para adicionar um pequeno espaço acima do texto */
     }
 
     .hero-text {

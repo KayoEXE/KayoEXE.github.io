@@ -17,7 +17,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 100px; /* Aumenta a altura da navbar */
+    height: 60px; /* Altura da navbar */
     display: flex;
     align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -42,25 +42,25 @@ body {
 }
 
 .logo-img {
-    height: 80px; /* Altura da imagem do logo ajustada */
+    height: 45px; /* Altura da imagem do logo */
     width: auto;
     margin-right: 10px; /* Espaço entre a logo e o texto */
 }
 
 .logo-text {
     font-family: 'Arial Black', Arial, sans-serif;
-    font-size: 32px; /* Tamanho da fonte do nome ajustado */
+    font-size: 24px; /* Tamanho da fonte do nome */
     font-weight: bold; /* Torna o texto mais grosso */
     display: flex;
     align-items: center;
 }
 
 .master {
-    color: #ab98da; /* Cor para 'Master' */
+    color: #423C54; /* Cor para 'Master' */
 }
 
 .pag {
-    color: #2d3bb8; /* Cor para 'Pag' */
+    color: #131848; /* Cor para 'Pag' */
 }
 
 /* Links da navbar */
@@ -68,8 +68,6 @@ body {
     list-style: none;
     display: flex;
     gap: 20px;
-    margin: 0;
-    padding: 0;
 }
 
 .nav-links li {
@@ -95,7 +93,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 20px; /* Adiciona algum espaçamento */
-    padding-top: 120px; /* Ajusta o espaço superior para evitar sobreposição com a navbar */
+    padding-top: 80px; /* Ajusta o espaço superior para evitar sobreposição com a navbar */
     position: relative;
     text-align: center; /* Alinha o texto centralmente dentro da seção */
     z-index: 1;
@@ -105,7 +103,7 @@ body {
 .hero-content {
     display: flex;
     align-items: center; /* Alinha o conteúdo verticalmente */
-    gap: 20px; /* Ajusta o espaço entre o texto e o cartão */
+    gap: 10px; /* Ajusta o espaço entre o texto e o cartão */
     max-width: 90%; /* Limita a largura do conteúdo */
     width: 100%; /* Garante que o conteúdo use toda a largura disponível */
     margin-top: 60px; /* Adiciona espaço entre a navbar e o conteúdo */
@@ -156,7 +154,7 @@ body {
 }
 
 .card-back {
-    background: #fff; /* Remove o fundo cinza */
+    background: #f1f1f1;
     transform: rotateY(180deg);
 }
 
@@ -180,7 +178,7 @@ body {
     font-size: 16px; /* Tamanho da fonte do texto "Clique" */
     color: #000; /* Cor do texto */
     position: absolute; /* Posiciona o texto ao lado do cartão */
-    right: -40px; /* Ajusta a posição do texto para colar no cartão */
+    right: -30px; /* Ajusta a posição do texto para colar no cartão */
     top: 50%; /* Centraliza o texto verticalmente em relação ao cartão */
     transform: translateY(-50%); /* Ajusta a posição vertical do texto */
     writing-mode: vertical-rl; /* Orienta o texto verticalmente */
@@ -203,79 +201,87 @@ p {
 
 /* Media Queries para responsividade */
 @media (max-width: 768px) {
-    .navbar {
-        height: 120px; /* Aumenta a altura da navbar para telas menores */
+    .hero-content {
+        flex-direction: column; /* Alinha o conteúdo em coluna em telas menores */
+        align-items: center; /* Centraliza o conteúdo */
+        gap: 10px; /* Diminui o espaço entre o texto e o cartão */
+        margin-top: 80px; /* Adiciona espaço entre a navbar e o conteúdo */
     }
 
-    .logo-img {
-        height: 70px; /* Altura da imagem do logo ajustada */
+    .hero-text {
+        margin-bottom: 10px; /* Reduz o espaço entre o texto e o cartão */
+        text-align: center; /* Centraliza o texto */
     }
 
-    .logo-text {
-        font-size: 28px; /* Tamanho da fonte do texto ajustado */
+    .card-container {
+        display: flex;
+        justify-content: center; /* Centraliza o cartão horizontalmente */
+        align-items: center; /* Alinha o cartão verticalmente */
     }
 
-    .nav-links {
-        flex-direction: column; /* Alinha os itens da navbar verticalmente */
-        gap: 10px;
-    }
-
-    .nav-links a {
-        font-size: 18px; /* Tamanho da fonte ajustado */
-    }
-
-    .hero-section {
-        padding: 20px; /* Ajusta o padding para telas menores */
-    }
-
-    .card {
-        width: 250px; /* Ajusta a largura do cartão */
-        height: 150px; /* Ajusta a altura do cartão */
+    .card-and-click {
+        flex-direction: column; /* Alinha o texto e o cartão verticalmente */
+        align-items: center; /* Centraliza o conteúdo */
+        margin-left: 0; /* Remove a margem para centralizar */
     }
 
     .click-text {
-        font-size: 14px; /* Tamanho da fonte do texto "Clique" ajustado */
-        right: -20px; /* Ajusta a posição do texto em relação ao cartão */
+        position: static; /* Remove o posicionamento absoluto */
+        margin-top: 5px; /* Adiciona espaço acima do texto */
+        writing-mode: horizontal-tb; /* Ajusta o texto para orientação horizontal */
+        text-align: center; /* Centraliza o texto */
     }
 }
 
 @media (max-width: 480px) {
     .navbar {
-        height: 80px; /* Altura da navbar ajustada para telas pequenas */
+        height: 50px; /* Altura reduzida para telas menores */
     }
-
     .logo-img {
-        height: 40px; /* Altura da imagem do logo ajustada */
+        height: 35px; /* Tamanho reduzido da logo */
     }
-
     .logo-text {
-        font-size: 20px; /* Tamanho da fonte do texto ajustado */
+        font-size: 20px; /* Tamanho reduzido da fonte */
     }
-
     .nav-links {
+        flex-direction: column;
         gap: 5px;
     }
+    .hero-section {
+        padding-top: 100px; /* Ajusta o padding-top para telas pequenas */
+        margin-top: 0; /* Garante que o padding-top seja aplicado sem conflito */
+    }
+    .hero-content {
+        padding-top: 60px; /* Ajusta o padding-top para adicionar mais espaço em telas pequenas */
+        margin-top: 0; /* Garante que o margin-top não conflite com o padding */
+    }
+    .card {
+        width: 260px; /* Largura aumentada do cartão */
+        height: 180px; /* Altura aumentada do cartão */
+    }
+    .click-text {
+        font-size: 14px; /* Tamanho reduzido do texto "Clique" */
+        right: -20px; /* Ajusta a posição do texto ao lado do cartão */
+    }
+}
 
-    .nav-links a {
-        font-size: 16px; /* Tamanho da fonte ajustado */
+@media (max-width: 390px) {
+    .hero-section {
+        padding-top: 20px; /* Ajusta o padding-top para adicionar um pequeno espaço acima do texto */
+    }
+
+    .hero-text {
+        font-size: 18px; /* Reduz o tamanho da fonte do texto */
+        margin-bottom: 10px; /* Ajusta a margem abaixo do texto */
     }
 
     .card {
-        width: 200px; /* Ajusta a largura do cartão */
-        height: 130px; /* Ajusta a altura do cartão */
+        width: 240px; /* Largura reduzida do cartão */
+        height: 160px; /* Altura reduzida do cartão */
     }
 
     .click-text {
-        font-size: 12px; /* Tamanho da fonte do texto "Clique" ajustado */
-        right: -10px; /* Ajusta a posição do texto em relação ao cartão */
+        font-size: 12px; /* Tamanho reduzido do texto "Clique" */
+        right: -10px; /* Ajusta a posição do texto ao lado do cartão */
     }
 }
-
-/* Seção com fundo preto */
-.black-section {
-    background-color: #000; /* Cor de fundo preta */
-    color: #fff; /* Cor do texto branca */
-    padding: 20px; /* Espaçamento interno */
-    text-align: center; /* Centraliza o texto */
-}
-

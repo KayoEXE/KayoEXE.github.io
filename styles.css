@@ -226,7 +226,7 @@ p {
 @media (max-width: 480px) {
     .navbar {
         height: 50px; /* Altura reduzida para telas menores */
-        padding: 15px 0; /* Adiciona mais espaço na parte superior e inferior da navbar */
+        padding: 20px 0; /* Adiciona mais espaço na parte superior e inferior da navbar */
     }
     .logo-img {
         height: 35px; /* Tamanho reduzido da logo */
@@ -276,4 +276,3 @@ p {
         right: -10px; /* Ajusta a posição do texto ao lado do cartão */
     }
 }
-

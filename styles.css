@@ -89,30 +89,21 @@ body {
 
 /* Links da navbar móvel */
 .nav-links-mobile {
-    display: flex;
-    flex-direction: column;
+    display: none; /* Oculta por padrão */
     position: absolute;
     top: 60px; /* Alinha abaixo da navbar */
     right: 0;
     background-color: #010212; /* Fundo igual ao da navbar */
     width: 100%; /* Largura total da tela */
-    padding: 0; /* Remove padding */
+    padding: 10px 0;
     list-style: none;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    opacity: 0; /* Inicialmente invisível */
-    visibility: hidden; /* Inicialmente escondido */
-    max-height: 0; /* Altura inicial zero para animação */
-    overflow: hidden; /* Oculta o conteúdo excedente */
-    transition: max-height 0.5s ease, opacity 0.5s ease, visibility 0.5s ease; /* Transições suaves */
 }
 
 /* Quando o menu está ativo */
 .nav-links-mobile.active {
-    opacity: 1; /* Tornar visível */
-    visibility: visible; /* Mostrar o menu */
-    max-height: 200px; /* Altura máxima para o menu */
-    padding: 10px 0; /* Espaço entre os links */
+    display: block; /* Exibe o menu quando a classe 'active' está adicionada */
 }
 
 .nav-links-mobile li {
@@ -224,14 +215,15 @@ body {
     border-radius: 10px; /* Cantos arredondados */
 }
 
-/* Texto "Clique" posicionado acima do cartão em telas menores */
+/* Texto "Clique" posicionado ao lado direito do cartão */
 .click-text {
     font-size: 16px; /* Tamanho da fonte do texto "Clique" */
     color: #000; /* Cor do texto */
     position: absolute; /* Posiciona o texto ao lado do cartão */
-    left: 50%; /* Centraliza o texto horizontalmente em relação ao cartão */
-    top: -30px; /* Posiciona o texto acima do cartão */
-    transform: translateX(-50%); /* Ajusta a posição horizontal do texto para centralizá-lo */
+    right: -30px; /* Ajusta a posição do texto para colar no cartão */
+    top: 50%; /* Centraliza o texto verticalmente em relação ao cartão */
+    transform: translateY(-50%); /* Ajusta a posição vertical do texto */
+    writing-mode: vertical-rl; /* Orienta o texto verticalmente */
     text-align: center; /* Alinha o texto ao centro */
 }
 
@@ -275,32 +267,35 @@ p {
 
     .hero-text {
         margin-bottom: 10px; /* Reduz o espaço entre o texto e o cartão */
-        text-align: center; /* Centraliza o texto em telas menores */
+        text-align: center; /* Centraliza o texto */
     }
 
     .card-and-click {
-        position: relative; /* Necessário para o posicionamento do texto "Clique" */
+        flex-direction: column; /* Alinha o texto e o cartão verticalmente */
+        align-items: center; /* Centraliza o conteúdo */
+        margin-left: 0; /* Remove a margem para centralizar */
     }
 
     .click-text {
-        left: 50%; /* Centraliza o texto horizontalmente em relação ao cartão */
-        top: -40px; /* Ajusta a posição acima do cartão */
-        transform: translateX(-50%); /* Centraliza horizontalmente */
-        text-align: center; /* Alinha o texto ao centro */
-        writing-mode: horizontal-tb; /* Orientação horizontal */
-    }
-
-    .nav-links-mobile {
-        top: 60px; /* Ajusta a posição do menu móvel */
-        right: 0;
-        width: 100%; /* Ocupa toda a largura da tela */
-        background-color: #010212; /* Cor de fundo do menu */
-    }
-
-    .nav-links-mobile.active {
-        opacity: 1; /* Torna visível */
-        visibility: visible; /* Mostra o menu */
-        transform: translateY(0); /* Coloca o menu na posição original */
+        position: static; /* Remove o posicionamento absoluto */
+        margin-top: 5px; /* Adiciona espaço acima do texto */
+        writing-mode: horizontal-tb; /* Ajusta o texto para orientação horizontal */
+        text-align: center; /* Centraliza o texto */
     }
 }
+
+@media (max-width: 480px) {
+    .navbar {
+        height: 70px; /* Altura ajustada para telas menores */
+    }
+
+    .logo-img {
+        height: 35px; /* Tamanho reduzido da logo */
+    }
+
+    .logo-text {
+        font-size: 20px; /* Reduz o tamanho da fonte */
+    }
+}
+
 

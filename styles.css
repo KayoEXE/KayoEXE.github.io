@@ -1,3 +1,4 @@
+/* Reset e configuração padrão */
 * {
     margin: 0;
     padding: 0;
@@ -23,6 +24,7 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     margin-bottom: 0; /* Remove a margem abaixo da navbar */
+    justify-content: space-between; /* Espaço entre itens da navbar */
 }
 
 /* Container da Navbar */
@@ -85,6 +87,46 @@ body {
     color: #2a2b5c; /* Cor ao passar o mouse */
 }
 
+/* Links da navbar móvel */
+.nav-links-mobile {
+    display: none; /* Oculta por padrão */
+    position: absolute;
+    top: 60px; /* Alinha abaixo da navbar */
+    right: 0;
+    background-color: #010212; /* Fundo igual ao da navbar */
+    width: 100%; /* Largura total da tela */
+    padding: 10px 0;
+    list-style: none;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Quando o menu está ativo */
+.nav-links-mobile.active {
+    display: block; /* Exibe o menu quando a classe 'active' está adicionada */
+}
+
+.nav-links-mobile li {
+    margin: 10px 0;
+}
+
+.nav-links-mobile a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Ícone do menu */
+.menu-toggle {
+    display: none; /* Escondido por padrão */
+    cursor: pointer;
+}
+
+.menu-icon {
+    height: 30px; /* Tamanho do ícone do menu */
+    width: auto;
+}
+
 /* Seção inicial com fundo branco */
 .hero-section {
     min-height: 100vh; /* Altura mínima igual à altura da viewport */
@@ -93,7 +135,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 20px; /* Adiciona algum espaçamento */
-    padding-top: 40px; /* Ajusta o espaço superior para evitar sobreposição com a navbar */
+    padding-top: 60px; /* Ajusta o espaço superior para evitar sobreposição com a navbar */
     position: relative;
     text-align: center; /* Alinha o texto centralmente dentro da seção */
     z-index: 1;
@@ -201,6 +243,14 @@ p {
 
 /* Media Queries para responsividade */
 @media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Esconde os links da navbar em telas menores */
+    }
+
+    .menu-toggle {
+        display: block; /* Mostra o ícone do menu */
+    }
+
     .hero-section {
         padding-top: 20px; /* Ajusta o padding-top para telas pequenas */
         display: flex;
@@ -220,12 +270,6 @@ p {
         text-align: center; /* Centraliza o texto */
     }
 
-    .card-container {
-        display: flex;
-        justify-content: center; /* Centraliza o cartão horizontalmente */
-        align-items: center; /* Alinha o cartão verticalmente */
-    }
-
     .card-and-click {
         flex-direction: column; /* Alinha o texto e o cartão verticalmente */
         align-items: center; /* Centraliza o conteúdo */
@@ -242,56 +286,16 @@ p {
 
 @media (max-width: 480px) {
     .navbar {
-        height: 70px; /* Altura reduzida para telas menores */
+        height: 70px; /* Altura ajustada para telas menores */
     }
+
     .logo-img {
         height: 35px; /* Tamanho reduzido da logo */
     }
+
     .logo-text {
-        font-size: 20px; /* Tamanho reduzido da fonte */
-    }
-    .nav-links {
-        flex-direction: column;
-        gap: 5px;
-    }
-    .hero-section {
-        padding-top: 20px; /* Ajusta o padding-top para telas pequenas */
-        display: flex;
-        justify-content: center; /* Centraliza o conteúdo horizontalmente */
-        align-items: center; /* Centraliza o conteúdo verticalmente */
-    }
-    .hero-content {
-        padding-top: 0; /* Remove o padding-top para melhorar a centralização */
-        margin: 0; /* Remove a margem para centralizar o conteúdo */
-    }
-    .card {
-        width: 260px; /* Largura do cartão ajustada */
-        height: 180px; /* Altura do cartão ajustada */
-    }
-    .click-text {
-        font-size: 14px; /* Tamanho reduzido do texto "Clique" */
-        right: -20px; /* Ajusta a posição do texto ao lado do cartão */
+        font-size: 20px; /* Reduz o tamanho da fonte */
     }
 }
 
-@media (max-width: 390px) {
-    .hero-section {
-        padding-top: 10px; /* Ajusta o padding-top para adicionar um pequeno espaço acima do texto */
-    }
-
-    .hero-text {
-        font-size: 18px; /* Reduz o tamanho da fonte do texto */
-        margin-bottom: 10px; /* Ajusta a margem abaixo do texto */
-    }
-
-    .card {
-        width: 240px; /* Largura reduzida do cartão */
-        height: 160px; /* Altura reduzida do cartão */
-    }
-
-    .click-text {
-        font-size: 12px; /* Tamanho reduzido do texto "Clique" */
-        right: -10px; /* Ajusta a posição do texto ao lado do cartão */
-    }
-}
 

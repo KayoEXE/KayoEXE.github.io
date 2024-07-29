@@ -150,9 +150,6 @@
             width: auto;
         }
 
-
-
-        
         /* Exibir o ícone do menu em telas pequenas */
         @media (max-width: 768px) {
             .menu-toggle {
@@ -211,7 +208,7 @@
             font-size: 1.2em;
         }
 
-        /* Nova seção com fundo preto */
+        /* Seção com fundo preto */
         .black-background {
             min-height: 100vh;
             background-color: #000;
@@ -233,7 +230,7 @@
             font-size: 1.2em;
         }
 
-        /* Nova seção com fundo cinza */
+        /* Seção com fundo cinza */
         .grey-background {
             min-height: 100vh;
             background-color: #f0f0f0;
@@ -255,11 +252,11 @@
         }
 
         .grey-background img {
-            width: 300px; /* Aumentar a largura */
-            height: 300px; /* Aumentar a altura */
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             object-fit: cover;
-            margin-right: auto; /* Alinha a imagem à esquerda */
+            margin-right: auto;
         }
 
         .grey-background .text {
@@ -283,10 +280,10 @@
             }
 
             .grey-background img {
-                width: 250px; /* Ajustar a largura para telas pequenas */
-                height: 250px; /* Ajustar a altura para telas pequenas */
+                width: 150px;
+                height: 150px;
                 margin-bottom: 20px;
-                margin-right: 0; /* Remove a margem à direita em telas pequenas */
+                margin-right: 0;
             }
         }
     </style>
@@ -316,50 +313,45 @@
         </div>
     </nav>
 
-    <!-- Seção inicial -->
+    <!-- Seção Inicial -->
     <section class="hero-section">
         <div class="hero-content">
             <div class="hero-text">
                 <h1>Quem Somos</h1>
-                <p>Conheça os bastidores por trás da MasterPag e a nossa missão de oferecer soluções inovadoras na gestão
-                    com nosso app e cartão de crédito corporativo.</p>
+                <p>Conheça a equipe por trás da MasterPag e nossa missão de oferecer soluções inovadoras em gestão de
+                    cartão de crédito corporativo.</p>
             </div>
         </div>
     </section>
 
-    <!-- Nova seção com fundo cinza -->
+    <!-- Seção com fundo cinza -->
     <section class="grey-background">
         <div class="content">
-            <img src="imagensite/imagem de kayo.png" alt="Imagem Circular">
+            <img src="imagensite/imagem de kayo.png" alt="Imagem Cinza"> <!-- Corrija o caminho da imagem aqui -->
             <div class="text">
-                <h2>Um pouco sobre mim</h2>
+                <h2>Eu me chamo Kayo</h2>
                 <p>Eu me chamo Kayo, tenho 18 anos, sou aspirante por computação e programação, e aos 18 anos decidi
                     fundar minha própria empresa de tecnologia.</p>
             </div>
         </div>
     </section>
 
-    <!-- Nova seção com fundo preto -->
+    <!-- Seção com fundo preto -->
     <section class="black-background">
-        <div class="content">
-            <div class="text">
-                <h2>minha Missão</h2>
-                <p>Nossa missão é proporcionar uma experiência inovadora na gestão de cartões de crédito corporativos, garantindo eficiência e controle financeiro para as empresas.
+        <div class="hero-content">
+            <h2> minha missão</h2>
+            <p>minha missão é proporcionar uma experiência inovadora na gestão de cartões de crédito corporativos, garantindo eficiência e controle financeiro para as empresas.
 
-                    Visamos ser líderes no setor, promovendo soluções que atendam às necessidades dos nossos clientes com tecnologia de ponta e segurança.</p>
-            </div>
+                Visamos ser líderes no setor, promovendo soluções que atendam às necessidades dos nossos clientes com tecnologia de ponta e segurança.</p>
         </div>
     </section>
 
+    <!-- Scripts para o menu hambúrguer -->
     <script>
-        // Script para o menu mobile
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navLinksMobile = document.querySelector('.nav-links-mobile');
-
-        menuToggle.addEventListener('click', () => {
-            navLinksMobile.classList.toggle('active');
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('.nav-links-mobile').classList.toggle('active');
         });
     </script>
 </body>
-</html>
 
+</html>

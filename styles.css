@@ -1,3 +1,4 @@
+
 /* Reset e configuração padrão */
 * {
     margin: 0;
@@ -77,14 +78,16 @@ body {
 }
 
 .nav-links a {
-    color: white;
+    color: white; /* Cor padrão dos links */
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease;
+    transition: none; /* Remove qualquer transição */
 }
 
-.nav-links a:hover {
-    color: #2a2b5c; /* Cor ao passar o mouse */
+.nav-links a:hover,
+.nav-links a:focus,
+.nav-links a:active {
+    color: white; /* Cor dos links ao passar o mouse, foco e clique */
 }
 
 /* Links da navbar móvel */
@@ -324,4 +327,5 @@ p {
         margin-bottom: 0; /* Remove a margem adicional abaixo da seção preta */
     }
 }
+
 

@@ -1,4 +1,3 @@
-
 /* Reset e configuração padrão */
 * {
     margin: 0;
@@ -244,23 +243,136 @@ p {
     margin-bottom: 20px;
 }
 
-/* Nova seção com fundo preto */
+
+
+
+
+
+/* Seção preta */
 .black-background {
+    background-color: #000; /* Cor de fundo preta */
     min-height: 100vh; /* Altura mínima igual à altura da viewport */
-    background-color: #000; /* Fundo preto */
-    color: #fff; /* Texto branco */
-    padding: 80px 20px; /* Espaçamento interno para igualar ao da seção branca */
-    text-align: center; /* Alinha o texto ao centro */
-    margin-bottom: 0; /* Remove a margem adicional abaixo da seção */
+    display: flex;
+    flex-direction: column; /* Alinha o conteúdo em coluna */
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    padding: 20px; /* Adiciona algum espaçamento */
+    padding-left: 100px; /* Ajuste para mover o conteúdo para a esquerda */
+    position: relative; /* Necessário para o posicionamento do conteúdo */
+    overflow: hidden; /* Garante que a imagem não saia da seção */
+}
+
+/* Conteúdo da seção preta */
+.black-background .content {
+    text-align: left; /* Alinha o texto à esquerda */
+    color: #fff; /* Cor do texto branca */
+    max-width: 60%; /* Limita a largura do conteúdo */
+    padding-right: 20px; /* Espaçamento à direita para distância da margem */
+    margin-left: 0; /* Remove a margem esquerda para mover o conteúdo para a esquerda */
+    margin-right: auto; /* Mantém a margem direita automática para centralizar o conteúdo */
+    z-index: 1; /* Garante que o texto fique sobre a imagem */
 }
 
 .black-background h2 {
-    margin-bottom: 10px; /* Espaço abaixo do título */
+    font-size: 48px; /* Tamanho grande da fonte */
+    line-height: 1.2; /* Espaçamento entre linhas */
+    margin: 0; /* Remove margem padrão do título */
 }
 
-.black-background p {
-    margin-bottom: 20px; /* Espaço abaixo do parágrafo */
+.highlight {
+    color: #2d3bb8; /* Cor das letras específicas */
 }
+
+/* Estilo para o parágrafo pequeno */
+.small-text {
+    font-size: 16px; /* Tamanho da fonte aumentado */
+    color: #fff; /* Cor do texto branca */
+    margin-top: 5px; /* Espaçamento reduzido acima do parágrafo */
+    margin-left: 24px; /* Ajuste o valor conforme desejado */
+}
+
+/* Contêiner da imagem */
+.image-container {
+    position: absolute; /* Posiciona a imagem de forma absoluta em relação à seção */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta a posição para o centro exato */
+    z-index: 0; /* Garante que a imagem fique atrás do texto */
+}
+
+.image-container img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura da seção */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .black-background {
+        padding: 15px; /* Ajusta o padding geral para telas pequenas */
+        text-align: center; /* Alinha o texto ao centro */
+    }
+
+    .black-background .content {
+        max-width: 100%; /* Limita a largura do conteúdo em telas pequenas */
+        margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+        padding-right: 0; /* Remove o padding-right */
+        padding-top: 15px; /* Ajusta o espaçamento acima do conteúdo */
+        padding-bottom: 15px; /* Ajusta o espaçamento abaixo do conteúdo */
+    }
+
+    .image-container {
+        position: static; /* Remove o posicionamento absoluto */
+        margin-top: 15px; /* Adiciona espaço acima da imagem */
+        transform: none; /* Remove a transformação */
+        padding-left: 0; /* Remove a margem esquerda */
+    }
+
+    .black-background img {
+        max-width: 80%; /* Reduz o tamanho da imagem para que caiba melhor */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+}
+
+@media (max-width: 480px) {
+    .black-background {
+        padding: 10px; /* Ajusta o padding geral para telas menores */
+    }
+
+    .black-background .content {
+        padding-top: 10px; /* Ajusta o espaçamento acima do conteúdo */
+        padding-bottom: 10px; /* Ajusta o espaçamento abaixo do conteúdo */
+    }
+
+    .black-background h2 {
+        font-size: 28px; /* Reduz o tamanho da fonte para telas menores */
+         margin-bottom: 10px; /* Diminua a margem inferior para aproximar o texto da imagem */
+    }
+
+    .small-text {
+        font-size: 12px; /* Reduz o tamanho da fonte do parágrafo pequeno */
+        margin-left: 5px; /* Ajusta a margem esquerda */
+        margin-top: 5px; /* Ajusta o espaçamento superior */
+    }
+
+    .image-container {
+        margin-top: 5px; /* Ajusta o espaço acima da imagem */
+        margin-left: -25px; /* Move a imagem mais para a esquerda */
+    }
+
+    .black-background img {
+        max-width: 70%; /* Reduz ainda mais o tamanho da imagem para que caiba melhor */
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 /* Media Queries para responsividade */
 @media (max-width: 768px) {
@@ -302,11 +414,6 @@ p {
         writing-mode: horizontal-tb; /* Ajusta o texto para orientação horizontal */
         text-align: center; /* Centraliza o texto */
     }
-
-    .black-background {
-        padding: 15px; /* Ajusta o padding para telas menores */
-        margin-bottom: 0; /* Remove a margem adicional abaixo da seção preta */
-    }
 }
 
 @media (max-width: 480px) {
@@ -320,11 +427,6 @@ p {
 
     .logo-text {
         font-size: 20px; /* Reduz o tamanho da fonte */
-    }
-
-    .black-background {
-        padding: 10px; /* Reduz o padding para telas muito pequenas */
-        margin-bottom: 0; /* Remove a margem adicional abaixo da seção preta */
     }
 }
 

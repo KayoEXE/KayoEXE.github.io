@@ -366,18 +366,65 @@ p {
 
 
 
-
-
-/* Seção roxa */
-.roxo-section {
-    background-color: #ab98da; /* Cor de fundo roxa */
+/* Seção cinza */
+.gray-background {
+    background-color: #e0e0e0; /* Cinza claro que se destaca do branco */
     min-height: 100vh; /* Altura mínima igual à altura da viewport */
     display: flex;
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    align-items: center; /* Centraliza o conteúdo verticalmente */
+    flex-direction: column; /* Empilha os elementos verticalmente */
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
     padding: 20px; /* Adiciona algum espaçamento */
-    position: relative; /* Necessário para o posicionamento do conteúdo */
+    color: #010212; /* Cor do texto */
+    text-align: center; /* Alinha o texto ao centro */
+    box-sizing: border-box; /* Inclui o padding na largura e altura total */
 }
+
+.gray-background h2 {
+    font-size: 4vw; /* Tamanho da fonte do título ajustado para responsividade */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+.gray-background p {
+    font-size: 2.5vw; /* Tamanho da fonte do parágrafo ajustado para responsividade */
+    max-width: 90%; /* Limita a largura do texto */
+    margin: 0 auto; /* Centraliza o texto horizontalmente */
+    line-height: 1.4; /* Melhora a legibilidade */
+    box-sizing: border-box; /* Inclui o padding na largura e altura total */
+}
+
+/* Estilos adicionais para garantir a responsividade em dispositivos menores */
+@media (max-width: 768px) {
+    .gray-background h2 {
+        font-size: 5vw; /* Ajusta o tamanho do título para dispositivos menores */
+    }
+
+    .gray-background p {
+        font-size: 3.5vw; /* Ajusta o tamanho do parágrafo para dispositivos menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .gray-background h2 {
+        font-size: 6vw; /* Ajusta o tamanho do título para dispositivos muito pequenos */
+    }
+
+    .gray-background p {
+        font-size: 4.5vw; /* Ajusta o tamanho do parágrafo para dispositivos muito pequenos */
+    }
+}
+
+
+
+
+
+/* Seção cinza escuro (vazia) */
+.dark-gray-background {
+    background-color: #b0b0b0; /* Cinza escuro que contrasta com o cinza claro */
+    min-height: 100vh; /* Altura mínima igual à altura da viewport */
+    padding: 20px; /* Adiciona algum espaçamento */
+}
+
 
 
 

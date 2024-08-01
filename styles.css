@@ -368,6 +368,16 @@ p {
 
 
 
+/* Seção roxa */
+.roxo-section {
+    background-color: #ab98da; /* Cor de fundo roxa */
+    min-height: 100vh; /* Altura mínima igual à altura da viewport */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    padding: 20px; /* Adiciona algum espaçamento */
+    position: relative; /* Necessário para o posicionamento do conteúdo */
+}
 
 
 

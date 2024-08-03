@@ -320,6 +320,7 @@ p {
     overflow: hidden; /* Garante que a imagem não saia da seção */
 }
 
+
 /* Conteúdo da seção preta */
 .black-background .content {
     text-align: left; /* Alinha o texto à esquerda */
@@ -363,64 +364,69 @@ p {
     height: auto; /* Mantém a proporção da imagem */
 }
 
-/* Media Queries para responsividade */
 @media (max-width: 768px) {
     .black-background {
-        padding: 15px; /* Ajusta o padding geral para telas pequenas */
-        text-align: center; /* Alinha o texto ao centro */
+        padding: 15px;
+        text-align: center;
     }
 
     .black-background .content {
-        max-width: 100%; /* Limita a largura do conteúdo em telas pequenas */
-        margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
-        padding-right: 0; /* Remove o padding-right */
-        padding-top: 15px; /* Ajusta o espaçamento acima do conteúdo */
-        padding-bottom: 15px; /* Ajusta o espaçamento abaixo do conteúdo */
+        max-width: 100%;
+        margin: 0 auto;
+        padding-right: 0;
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
 
     .image-container {
         position: static; /* Remove o posicionamento absoluto */
-        margin-top: 15px; /* Adiciona espaço acima da imagem */
+        margin-top: 10px; /* Move a imagem mais para cima */
         transform: none; /* Remove a transformação */
         padding-left: 0; /* Remove a margem esquerda */
     }
 
     .black-background img {
-        max-width: 80%; /* Reduz o tamanho da imagem para que caiba melhor */
+        max-width: 70%; /* Reduz o tamanho da imagem para que caiba melhor */
         height: auto; /* Mantém a proporção da imagem */
     }
 }
 
 @media (max-width: 480px) {
     .black-background {
-        padding: 10px; /* Ajusta o padding geral para telas menores */
+        padding: 10px;
     }
 
     .black-background .content {
-        padding-top: 10px; /* Ajusta o espaçamento acima do conteúdo */
-        padding-bottom: 10px; /* Ajusta o espaçamento abaixo do conteúdo */
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 
     .black-background h2 {
-        font-size: 28px; /* Reduz o tamanho da fonte para telas menores */
-         margin-bottom: 10px; /* Diminua a margem inferior para aproximar o texto da imagem */
+        font-size: 28px;
+        margin-bottom: 10px;
     }
 
     .small-text {
-        font-size: 12px; /* Reduz o tamanho da fonte do parágrafo pequeno */
-        margin-left: 5px; /* Ajusta a margem esquerda */
-        margin-top: 5px; /* Ajusta o espaçamento superior */
+        font-size: 12px;
+        margin-left: 5px;
+        margin-top: 5px;
     }
 
     .image-container {
-        margin-top: 5px; /* Ajusta o espaço acima da imagem */
-        margin-left: -23px; /* Move a imagem mais para a esquerda */
+        margin-top: 0px; /* Ajusta o espaço acima da imagem para movê-la ainda mais para cima */
+        margin-left: -20px; /* Ajusta a margem esquerda se necessário */
+        position: static; /* Assegura que a imagem não seja posicionada absolutamente */
+        transform: none; /* Remove a transformação */
     }
 
     .black-background img {
-        max-width: 70%; /* Reduz ainda mais o tamanho da imagem para que caiba melhor */
+        max-width: 40%; /* Reduz ainda mais o tamanho da imagem para que caiba melhor */
+        height: auto; /* Mantém a proporção da imagem */
+        max-height: 50vh; /* Define uma altura máxima relativa à altura da viewport */
     }
 }
+
+
 
 
 
@@ -517,7 +523,7 @@ p {
 /* Container de texto */
 .text-container {
     max-width: 50%; /* Largura máxima do container de texto */
-    text-align: left; /* Alinha o texto à esquerda */
+    text-align: center; /* Centraliza o texto */
     margin-right: 0; /* Remove o espaçamento à direita */
     margin-left: 0; /* Remove o espaçamento à esquerda */
     padding-left: 10px; /* Adiciona um pouco de padding à esquerda */
@@ -535,6 +541,7 @@ p {
     font-size: 18px; /* Tamanho da fonte do parágrafo */
     margin: 5px 0; /* Reduz a margem para aproximar o texto */
     line-height: 1.4; /* Ajusta o espaçamento entre linhas */
+    text-align: center; /* Centraliza o texto */
 }
 
 /* Media Queries para responsividade */
@@ -565,6 +572,7 @@ p {
     .dark-background p {
         font-size: 16px; /* Ajusta o tamanho do parágrafo */
         margin: 0; /* Remove margem adicional para melhor alinhamento */
+        text-align: center; /* Centraliza o texto */
     }
 }
 
@@ -590,6 +598,7 @@ p {
     .dark-background p {
         font-size: 14px; /* Ajusta o tamanho do parágrafo */
         margin: 0; /* Remove margem adicional para melhor alinhamento */
+        text-align: center; /* Centraliza o texto */
     }
 }
 
@@ -601,35 +610,141 @@ p {
 
 
 
-/* Seção cinza escuro */
-.dark-gray-background {
-    background-color: #4d4d4d; /* Cor de fundo cinza escuro */
+
+/* Seção com fundo cinza muito escuro */
+.sessao-5 {
     min-height: 100vh; /* Altura mínima igual à altura da viewport */
+    background-color: #1a1a1a; /* Cor de fundo cinza muito escuro */
     display: flex; /* Utiliza Flexbox para alinhamento */
-    justify-content: flex-start; /* Alinha os itens no início da seção (à esquerda) */
+    flex-direction: row; /* Alinha os itens horizontalmente */
+    justify-content: flex-start; /* Alinha os itens à esquerda */
     align-items: center; /* Centraliza os itens verticalmente */
-    padding: 0 20px; /* Espaçamento nas laterais */
+    padding: 20px; /* Espaçamento em todos os lados */
     color: #ffffff; /* Cor do texto */
+    text-align: left; /* Alinha o texto à esquerda */
+    gap: 10px; /* Espaçamento entre elementos */
+    position: relative;
+    padding-top: 60px; /* Ajusta o espaço superior para evitar sobreposição com a navbar */
 }
 
-/* Seção cinza ainda mais escuro */
-.even-darker-gray-background {
-    background-color: #1a1a1a; /* Cinza muito escuro que cria contraste */
+/* Seção inicial com fundo branco */
+.hero-section {
     min-height: 100vh; /* Altura mínima igual à altura da viewport */
-    display: flex; /* Utiliza Flexbox para alinhamento */
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    align-items: center; /* Centraliza os itens verticalmente */
-    padding: 0 20px; /* Espaçamento nas laterais igual à seção anterior */
-    color: #ffffff; /* Cor do texto */
-    text-align: center; /* Alinha o texto ao centro */
+    background-color: #fff; /* Cor de fundo branca */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Adiciona algum espaçamento */
+    padding-top: 60px; /* Ajusta o espaço superior para evitar sobreposição com a navbar */
+    position: relative;
+    text-align: center; /* Alinha o texto centralmente dentro da seção */
+    z-index: 1;
 }
 
-/* Ajuste do texto para ambas as seções */
-.dark-gray-background h1,
-.dark-gray-background p,
-.even-darker-gray-background h1,
-.even-darker-gray-background p {
+/* Container de imagem */
+.image-container {
+    max-width: 25%; /* Largura máxima do container de imagem em telas grandes */
+    margin-left: 5px; /* Espaço reduzido entre a imagem e o texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px; /* Ajuste a margem superior conforme necessário */
+}
+
+/* Remove o padding do lado direito e define os cantos arredondados */
+.image-container img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do container */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 15px; /* Cantos arredondados em telas grandes */
+}
+
+/* Container de texto */
+.text-container {
+    max-width: 50%; /* Largura máxima do container de texto */
+    text-align: center; /* Centraliza o texto */
+    margin-right: 0; /* Remove o espaçamento à direita */
+    margin-left: 0; /* Remove o espaçamento à esquerda */
+    padding-left: 10px; /* Adiciona um pouco de padding à esquerda */
+}
+
+/* Título */
+.sessao-5 h1 {
+    font-size: 40px; /* Tamanho da fonte do título */
     margin: 0; /* Remove margem para melhor alinhamento */
+    line-height: 1.2; /* Ajusta o espaçamento entre linhas */
 }
+
+/* Parágrafo */
+.sessao-5 p {
+    font-size: 18px; /* Tamanho da fonte do parágrafo */
+    margin: 5px 0; /* Reduz a margem para aproximar o texto */
+    line-height: 1.4; /* Ajusta o espaçamento entre linhas */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .sessao-5 {
+        flex-direction: column; /* Alinha o conteúdo em coluna */
+        justify-content: center; /* Centraliza o conteúdo verticalmente */
+        align-items: center; /* Centraliza o conteúdo horizontalmente */
+        padding: 20px; /* Adiciona algum espaçamento */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .image-container {
+        max-width: 80%; /* Limita a largura da imagem */
+        margin-bottom: 20px; /* Espaço abaixo da imagem */
+    }
+
+    .text-container {
+        max-width: 80%; /* Limita a largura do texto */
+        margin: 0; /* Remove margem para centralizar o texto */
+    }
+
+    .sessao-5 h1 {
+        font-size: 32px; /* Ajusta o tamanho da fonte para telas menores */
+        margin-bottom: 10px; /* Espaço abaixo do título */
+    }
+
+    .sessao-5 p {
+        font-size: 16px; /* Ajusta o tamanho do parágrafo */
+        margin: 0; /* Remove margem adicional para melhor alinhamento */
+        text-align: center; /* Centraliza o texto */
+    }
+}
+
+@media (max-width: 480px) {
+    .sessao-5 {
+        padding: 10px; /* Ajusta o padding geral para telas menores */
+    }
+
+    .image-container {
+        max-width: 100%; /* Limita a largura da imagem */
+        margin-bottom: 10px; /* Espaço abaixo da imagem */
+        margin-left: -1px; /* Ajuste o valor para mover a imagem mais para a esquerda */
+    }
+
+    .text-container {
+        max-width: 100%; /* Limita a largura do texto */
+    }
+
+    .sessao-5 h1 {
+        font-size: 24px; /* Ajusta o tamanho da fonte para telas menores */
+        margin-bottom: 5px; /* Espaço abaixo do título reduzido */
+    }
+
+    .sessao-5 p {
+        font-size: 14px; /* Ajusta o tamanho do parágrafo */
+        margin: 0; /* Remove margem adicional para melhor alinhamento */
+        text-align: center; /* Centraliza o texto */
+    }
+}
+
+
+
+
+
+
 
 

@@ -243,6 +243,64 @@ p {
     margin-bottom: 20px;
 }
 
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Esconde os links da navbar em telas menores */
+    }
+
+    .menu-toggle {
+        display: block; /* Mostra o ícone do menu */
+    }
+
+    .hero-section {
+        padding-top: 20px; /* Ajusta o padding-top para telas pequenas */
+        display: flex;
+        justify-content: center; /* Centraliza o conteúdo horizontalmente */
+        align-items: center; /* Centraliza o conteúdo verticalmente */
+    }
+
+    .hero-content {
+        flex-direction: column; /* Alinha o conteúdo em coluna */
+    }
+
+    .hero-text {
+        text-align: center; /* Alinha o texto ao centro */
+        margin-bottom: 0; /* Remove a margem inferior */
+    }
+
+    .card-and-click {
+        flex-direction: column; /* Alinha o cartão e o texto "Clique" em coluna */
+    }
+
+    .card {
+        margin: 20px 0; /* Adiciona margem ao redor do cartão */
+    }
+
+    .click-text {
+        position: static; /* Remove o posicionamento absoluto */
+        margin-top: 5px; /* Adiciona espaço acima do texto */
+        writing-mode: horizontal-tb; /* Ajusta o texto para orientação horizontal */
+        text-align: center; /* Centraliza o texto */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        height: 70px; /* Altura ajustada para telas menores */
+    }
+
+    .logo-img {
+        height: 35px; /* Tamanho reduzido da logo */
+    }
+
+    .logo-text {
+        font-size: 20px; /* Reduz o tamanho da fonte */
+    }
+}
+
+
+
 
 
 
@@ -250,7 +308,7 @@ p {
 
 /* Seção preta */
 .black-background {
-    background-color: #000; /* Cor de fundo preta */
+    background-color: #333333; /* Cor de fundo preta */
     min-height: 100vh; /* Altura mínima igual à altura da viewport */
     display: flex;
     flex-direction: column; /* Alinha o conteúdo em coluna */
@@ -366,6 +424,13 @@ p {
 
 
 
+
+
+
+
+
+
+
 /* Seção cinza */
 .gray-background {
     background-color: #e0e0e0; /* Cinza claro que se destaca do branco */
@@ -418,73 +483,153 @@ p {
 
 
 
-/* Seção cinza escuro (vazia) */
-.dark-gray-background {
-    background-color: #b0b0b0; /* Cinza escuro que contrasta com o cinza claro */
+
+
+
+.dark-background {
+    background-color: #4d4d4d; /* Cor de fundo cinza escuro */
     min-height: 100vh; /* Altura mínima igual à altura da viewport */
-    padding: 20px; /* Adiciona algum espaçamento */
+    display: flex; /* Utiliza Flexbox para alinhamento */
+    flex-direction: row; /* Alinha os itens horizontalmente */
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+    align-items: center; /* Centraliza os itens verticalmente */
+    padding: 20px; /* Espaçamento em todos os lados */
+    color: #ffffff; /* Cor do texto */
+    text-align: left; /* Alinha o texto à esquerda */
+    gap: 10px; /* Espaçamento entre elementos */
 }
 
+/* Container de imagem */
+.image-container {
+    max-width: 40%; /* Largura máxima do container de imagem */
+    margin-left: 10px; /* Espaço reduzido entre a imagem e o texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+/* Remove o padding do lado direito */
+.image-container img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do container */
+    height: auto; /* Mantém a proporção da imagem */
+}
 
+/* Container de texto */
+.text-container {
+    max-width: 50%; /* Largura máxima do container de texto */
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-right: 0; /* Remove o espaçamento à direita */
+    margin-left: 0; /* Remove o espaçamento à esquerda */
+    padding-left: 10px; /* Adiciona um pouco de padding à esquerda */
+}
 
+/* Título */
+.dark-background h1 {
+    font-size: 40px; /* Tamanho da fonte do título */
+    margin: 0; /* Remove margem para melhor alinhamento */
+    line-height: 1.2; /* Ajusta o espaçamento entre linhas */
+}
 
-
+/* Parágrafo */
+.dark-background p {
+    font-size: 18px; /* Tamanho da fonte do parágrafo */
+    margin: 5px 0; /* Reduz a margem para aproximar o texto */
+    line-height: 1.4; /* Ajusta o espaçamento entre linhas */
+}
 
 /* Media Queries para responsividade */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none; /* Esconde os links da navbar em telas menores */
-    }
-
-    .menu-toggle {
-        display: block; /* Mostra o ícone do menu */
-    }
-
-    .hero-section {
-        padding-top: 20px; /* Ajusta o padding-top para telas pequenas */
-        display: flex;
-        justify-content: center; /* Centraliza o conteúdo horizontalmente */
-        align-items: center; /* Centraliza o conteúdo verticalmente */
-    }
-
-    .hero-content {
+    .dark-background {
         flex-direction: column; /* Alinha o conteúdo em coluna */
-    }
-
-    .hero-text {
-        text-align: center; /* Alinha o texto ao centro */
-        margin-bottom: 0; /* Remove a margem inferior */
-    }
-
-    .card-and-click {
-        flex-direction: column; /* Alinha o cartão e o texto "Clique" em coluna */
-    }
-
-    .card {
-        margin: 20px 0; /* Adiciona margem ao redor do cartão */
-    }
-
-    .click-text {
-        position: static; /* Remove o posicionamento absoluto */
-        margin-top: 5px; /* Adiciona espaço acima do texto */
-        writing-mode: horizontal-tb; /* Ajusta o texto para orientação horizontal */
+        justify-content: center; /* Centraliza o conteúdo verticalmente */
+        align-items: center; /* Centraliza o conteúdo horizontalmente */
+        padding: 20px; /* Adiciona algum espaçamento */
         text-align: center; /* Centraliza o texto */
+    }
+
+    .image-container {
+        max-width: 80%; /* Limita a largura da imagem */
+        margin-bottom: 20px; /* Espaço abaixo da imagem */
+    }
+
+    .text-container {
+        max-width: 80%; /* Limita a largura do texto */
+        margin: 0; /* Remove margem para centralizar o texto */
+    }
+
+    .dark-background h1 {
+        font-size: 32px; /* Ajusta o tamanho da fonte para telas menores */
+        margin-bottom: 10px; /* Espaço abaixo do título */
+    }
+
+    .dark-background p {
+        font-size: 16px; /* Ajusta o tamanho do parágrafo */
+        margin: 0; /* Remove margem adicional para melhor alinhamento */
     }
 }
 
 @media (max-width: 480px) {
-    .navbar {
-        height: 70px; /* Altura ajustada para telas menores */
+    .dark-background {
+        padding: 10px; /* Ajusta o padding geral para telas menores */
     }
 
-    .logo-img {
-        height: 35px; /* Tamanho reduzido da logo */
+    .image-container {
+        max-width: 100%; /* Limita a largura da imagem */
+        margin-bottom: 10px; /* Espaço abaixo da imagem */
     }
 
-    .logo-text {
-        font-size: 20px; /* Reduz o tamanho da fonte */
+    .text-container {
+        max-width: 100%; /* Limita a largura do texto */
     }
+
+    .dark-background h1 {
+        font-size: 24px; /* Ajusta o tamanho da fonte para telas menores */
+        margin-bottom: 5px; /* Espaço abaixo do título reduzido */
+    }
+
+    .dark-background p {
+        font-size: 14px; /* Ajusta o tamanho do parágrafo */
+        margin: 0; /* Remove margem adicional para melhor alinhamento */
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Seção cinza escuro */
+.dark-gray-background {
+    background-color: #4d4d4d; /* Cor de fundo cinza escuro */
+    min-height: 100vh; /* Altura mínima igual à altura da viewport */
+    display: flex; /* Utiliza Flexbox para alinhamento */
+    justify-content: flex-start; /* Alinha os itens no início da seção (à esquerda) */
+    align-items: center; /* Centraliza os itens verticalmente */
+    padding: 0 20px; /* Espaçamento nas laterais */
+    color: #ffffff; /* Cor do texto */
+}
+
+/* Seção cinza ainda mais escuro */
+.even-darker-gray-background {
+    background-color: #1a1a1a; /* Cinza muito escuro que cria contraste */
+    min-height: 100vh; /* Altura mínima igual à altura da viewport */
+    display: flex; /* Utiliza Flexbox para alinhamento */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    padding: 0 20px; /* Espaçamento nas laterais igual à seção anterior */
+    color: #ffffff; /* Cor do texto */
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+/* Ajuste do texto para ambas as seções */
+.dark-gray-background h1,
+.dark-gray-background p,
+.even-darker-gray-background h1,
+.even-darker-gray-background p {
+    margin: 0; /* Remove margem para melhor alinhamento */
 }
 
 

@@ -611,7 +611,7 @@ p {
 
 
 
-/* Seção com fundo cinza muito escuro */
+/* Seção 5 - Fundo Cinza Escuro */
 .sessao-5 {
     min-height: 100vh; /* Altura mínima igual à altura da viewport */
     background-color: #1a1a1a; /* Cor de fundo cinza muito escuro */
@@ -627,39 +627,22 @@ p {
     padding-top: 60px; /* Ajusta o espaço superior para evitar sobreposição com a navbar */
 }
 
-/* Seção inicial com fundo branco */
-.hero-section {
-    min-height: 100vh; /* Altura mínima igual à altura da viewport */
-    background-color: #fff; /* Cor de fundo branca */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px; /* Adiciona algum espaçamento */
-    padding-top: 60px; /* Ajusta o espaço superior para evitar sobreposição com a navbar */
-    position: relative;
-    text-align: center; /* Alinha o texto centralmente dentro da seção */
-    z-index: 1;
-}
-
-/* Container de imagem */
-.image-container {
+.sessao-5 .image-container {
     max-width: 25%; /* Largura máxima do container de imagem em telas grandes */
     margin-left: 5px; /* Espaço reduzido entre a imagem e o texto */
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 25px; /* Ajuste a margem superior conforme necessário */
+    margin-top: 10px; /* Ajuste a margem superior conforme necessário */
 }
 
-/* Remove o padding do lado direito e define os cantos arredondados */
-.image-container img {
+.sessao-5 .image-container img {
     max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do container */
     height: auto; /* Mantém a proporção da imagem */
     border-radius: 15px; /* Cantos arredondados em telas grandes */
 }
 
-/* Container de texto */
-.text-container {
+.sessao-5 .text-container {
     max-width: 50%; /* Largura máxima do container de texto */
     text-align: center; /* Centraliza o texto */
     margin-right: 0; /* Remove o espaçamento à direita */
@@ -667,14 +650,12 @@ p {
     padding-left: 10px; /* Adiciona um pouco de padding à esquerda */
 }
 
-/* Título */
 .sessao-5 h1 {
     font-size: 40px; /* Tamanho da fonte do título */
     margin: 0; /* Remove margem para melhor alinhamento */
     line-height: 1.2; /* Ajusta o espaçamento entre linhas */
 }
 
-/* Parágrafo */
 .sessao-5 p {
     font-size: 18px; /* Tamanho da fonte do parágrafo */
     margin: 5px 0; /* Reduz a margem para aproximar o texto */
@@ -682,7 +663,6 @@ p {
     text-align: center; /* Centraliza o texto */
 }
 
-/* Media Queries para responsividade */
 @media (max-width: 768px) {
     .sessao-5 {
         flex-direction: column; /* Alinha o conteúdo em coluna */
@@ -692,12 +672,12 @@ p {
         text-align: center; /* Centraliza o texto */
     }
 
-    .image-container {
+    .sessao-5 .image-container {
         max-width: 80%; /* Limita a largura da imagem */
         margin-bottom: 20px; /* Espaço abaixo da imagem */
     }
 
-    .text-container {
+    .sessao-5 .text-container {
         max-width: 80%; /* Limita a largura do texto */
         margin: 0; /* Remove margem para centralizar o texto */
     }
@@ -719,13 +699,13 @@ p {
         padding: 10px; /* Ajusta o padding geral para telas menores */
     }
 
-    .image-container {
+    .sessao-5 .image-container {
         max-width: 100%; /* Limita a largura da imagem */
         margin-bottom: 10px; /* Espaço abaixo da imagem */
         margin-left: -1px; /* Ajuste o valor para mover a imagem mais para a esquerda */
     }
 
-    .text-container {
+    .sessao-5 .text-container {
         max-width: 100%; /* Limita a largura do texto */
     }
 
@@ -743,6 +723,130 @@ p {
 
 
 
+
+
+
+
+
+
+/* Seção 7 */
+.sessao-7 {
+    min-height: 100vh; /* Altura mínima igual à altura da viewport */
+    background-color: #121212; /* Cor de fundo mais escura */
+    display: flex; /* Utiliza Flexbox para alinhamento */
+    flex-direction: row; /* Alinha os itens horizontalmente */
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+    align-items: center; /* Centraliza os itens verticalmente */
+    padding: 20px; /* Espaçamento em todos os lados */
+    color: #ffffff; /* Cor do texto */
+    text-align: left; /* Alinha o texto à esquerda */
+    gap: 10px; /* Espaçamento entre elementos */
+    position: relative; /* Necessário para o posicionamento relativo do conteúdo */
+    padding-top: 60px; /* Ajusta o espaço superior para evitar sobreposição com a navbar */
+}
+
+/* Container de imagem */
+.image-container {
+    max-width: 55%; /* Largura máxima do container de imagem em telas grandes */
+    margin-left: 190px; /* Ajuste este valor para mover a imagem para a esquerda em telas grandes */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px; /* Ajuste a margem superior conforme necessário */
+    margin-right: 0; /* Remove o espaçamento à direita */
+    /* Remova margin-left ou ajuste conforme necessário */
+}
+
+/* Remove o padding do lado direito e define os cantos arredondados */
+.image-container img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do container */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 15px; /* Cantos arredondados em telas grandes */
+}
+
+/* Container de texto */
+.text-container {
+    max-width: 50%; /* Largura máxima do container de texto */
+    text-align: center; /* Centraliza o texto */
+    margin-right: 0; /* Remove o espaçamento à direita */
+    margin-left: 0; /* Remove o espaçamento à esquerda */
+    padding-left: 1px; /* Adiciona um pouco de padding à esquerda */
+}
+
+/* Título */
+.sessao-7 h1 {
+    font-size: 40px; /* Tamanho da fonte do título */
+    margin: 0; /* Remove margem para melhor alinhamento */
+    line-height: 1.2; /* Ajusta o espaçamento entre linhas */
+}
+
+/* Parágrafo */
+.sessao-7 p {
+    font-size: 18px; /* Tamanho da fonte do parágrafo */
+    margin: 5px 0; /* Reduz a margem para aproximar o texto */
+    line-height: 1.4; /* Ajusta o espaçamento entre linhas */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .sessao-7 {
+        flex-direction: column; /* Alinha o conteúdo em coluna */
+        justify-content: center; /* Centraliza o conteúdo verticalmente */
+        align-items: center; /* Centraliza o conteúdo horizontalmente */
+        padding: 20px; /* Adiciona algum espaçamento */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .image-container {
+        max-width: 80%; /* Limita a largura da imagem */
+        margin-bottom: 20px; /* Espaço abaixo da imagem */
+        margin-left: 0; /* Remove margem lateral em telas menores */
+    }
+
+    .text-container {
+        max-width: 80%; /* Limita a largura do texto */
+        margin: 0; /* Remove margem para centralizar o texto */
+    }
+
+    .sessao-7 h1 {
+        font-size: 32px; /* Ajusta o tamanho da fonte para telas menores */
+        margin-bottom: 10px; /* Espaço abaixo do título */
+    }
+
+    .sessao-7 p {
+        font-size: 16px; /* Ajusta o tamanho do parágrafo */
+        margin: 0; /* Remove margem adicional para melhor alinhamento */
+        text-align: center; /* Centraliza o texto */
+    }
+}
+
+@media (max-width: 480px) {
+    .sessao-7 {
+        padding: 10px; /* Ajusta o padding geral para telas menores */
+    }
+
+    .image-container {
+        max-width: 100%; /* Limita a largura da imagem */
+        margin-bottom: 10px; /* Espaço abaixo da imagem */
+        margin-left: 0; /* Remove margem lateral em telas menores */
+    }
+
+    .text-container {
+        max-width: 100%; /* Limita a largura do texto */
+    }
+
+    .sessao-7 h1 {
+        font-size: 24px; /* Ajusta o tamanho da fonte para telas menores */
+        margin-bottom: 5px; /* Espaço abaixo do título reduzido */
+    }
+
+    .sessao-7 p {
+        font-size: 14px; /* Ajusta o tamanho do parágrafo */
+        margin: 0; /* Remove margem adicional para melhor alinhamento */
+        text-align: center; /* Centraliza o texto */
+    }
+}
 
 
 

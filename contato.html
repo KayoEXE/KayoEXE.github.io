@@ -1,2 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - MasterPag</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Entre em contato com a MasterPag para mais informações sobre nossos serviços de cartão de crédito corporativo.">
+    <meta name="keywords" content="contato, MasterPag, cartão de crédito corporativo, suporte">
+    <meta name="author" content="Kayo Emanuel da Silva Lima">
+    <meta name="robots" content="index, follow">
+    <style>
+        /* Estilo para ocultar o item da navbar */
+        .hide-nav-item {
+            display: none !important;
+        }
 
+        /* Estilo da navbar */
+        .navbar {
+            background-color: #010212; /* Cor de fundo da navbar */
+            color: #ffffff; /* Cor do texto dos links */
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-sizing: border-box; /* Inclui o padding na largura total */
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            height: 40px; /* Ajuste o tamanho conforme necessário */
+        }
+
+        .logo-text {
+            display: flex;
+            align-items: center;
+            font-family: 'Arial Black', sans-serif;
+            font-size: 1.5rem; /* Ajuste o tamanho conforme necessário */
+        }
+
+        .master {
+            color: #ab98da; /* Cor de "Master" */
+        }
+
+        .pag {
+            color: #2d3bb8; /* Cor de "Pag" */
+        }
+
+        .nav-links,
+        .nav-links-mobile {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 15px; /* Espaçamento entre os itens */
+        }
+
+        .nav-links li,
+        .nav-links-mobile li {
+            display: inline;
+        }
+
+        .nav-links a,
+        .nav-links-mobile a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem; /* Ajuste o tamanho conforme necessário */
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links-mobile a:hover {
+            color: #d0d0d0; /* Cor dos links ao passar o mouse */
+        }
+
+        .menu-toggle {
+            display: none; /* Esconde o menu-toggle em telas grandes */
+        }
+
+        .menu-icon {
+            height: 30px; /* Ajuste o tamanho conforme necessário */
+        }
+
+        /* Estilos adicionais para a navbar móvel */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Esconde os links da navbar em telas menores */
+            }
+
+            .menu-toggle {
+                display: block; /* Mostra o menu-toggle em telas menores */
+            }
+        }
+
+        .nav-links-mobile {
+            display: none; /* Esconde o menu móvel inicialmente */
+            position: absolute;
+            top: 60px; /* Ajuste conforme necessário */
+            right: 0;
+            background-color: #010212;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex-direction: column; /* Empilha os itens verticalmente */
+            gap: 10px; /* Espaçamento entre os itens */
+        }
+
+        .nav-links-mobile a {
+            font-size: 1.2rem; /* Ajuste o tamanho conforme necessário */
+        }
+
+        .nav-links-mobile.show {
+            display: flex; /* Mostra o menu móvel quando a classe "show" é adicionada */
+        }
+
+        /* Nova seção 10 */
+        .sessao11-background {
+            background-color: #e0e0e0; /* Mesma cor de fundo da seção cinza */
+            min-height: 100vh; /* Altura mínima igual à altura da viewport */
+            display: flex;
+            flex-direction: column; /* Empilha os elementos verticalmente */
+            justify-content: center; /* Centraliza o conteúdo verticalmente */
+            align-items: center; /* Centraliza o conteúdo horizontalmente */
+            padding: 20px; /* Adiciona algum espaçamento */
+            color: #010212; /* Cor do texto */
+            text-align: center; /* Alinha o texto ao centro */
+            box-sizing: border-box; /* Inclui o padding na largura e altura total */
+            margin: 0; /* Remove margens adicionais */
+            padding-bottom: 0; /* Remove o padding inferior para evitar espaço extra */
+        }
+
+        .sessao11-background h2 {
+            font-size: 4vw; /* Tamanho da fonte do título ajustado para responsividade */
+            margin-bottom: 20px; /* Espaço abaixo do título */
+        }
+
+        .sessao11-background p {
+            font-size: 2.5vw; /* Tamanho da fonte do parágrafo ajustado para responsividade */
+            max-width: 90%; /* Limita a largura do texto */
+            margin: 0 auto; /* Centraliza o texto horizontalmente */
+            line-height: 1.4; /* Melhora a legibilidade */
+            box-sizing: border-box; /* Inclui o padding na largura e altura total */
+        }
+
+        /* Estilos adicionais para garantir a responsividade em dispositivos menores */
+        @media (max-width: 768px) {
+            .sessao11-background h2 {
+                font-size: 5vw; /* Ajusta o tamanho do título para dispositivos menores */
+            }
+
+            .sessao11-background p {
+                font-size: 3.5vw; /* Ajusta o tamanho do parágrafo para dispositivos menores */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sessao11-background h2 {
+                font-size: 6vw; /* Ajusta o tamanho do título para dispositivos muito pequenos */
+            }
+
+            .sessao11-background p {
+                font-size: 4.5vw; /* Ajusta o tamanho do parágrafo para dispositivos muito pequenos */
+            }
+        }
+
+        /* Estilo da navbar do rodapé */
+        .footer-navbar {
+            background-color: #010212; /* Cor de fundo da navbar */
+            color: #e0e0e0; /* Cor do texto dos links */
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            position: relative;
+            box-sizing: border-box; /* Inclui o padding na largura total */
+        }
+
+        .footer-contacts {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap; /* Permite que os itens quebrem linha se necessário */
+            gap: 15px; /* Espaço entre os itens */
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box; /* Inclui o padding na largura total */
+            text-align: center; /* Centraliza o texto */
+        }
+
+        .footer-contacts div {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Espaço entre ícone e texto */
+        }
+
+        .footer-contacts a {
+            color: #e0e0e0; /* Cor dos links */
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-contacts a:hover {
+            color: #ffffff; /* Cor dos links ao passar o mouse */
+        }
+
+        .footer-contacts i {
+            font-size: 1.2rem; /* Tamanho dos ícones */
+        }
+
+        /* Media Queries para responsividade */
+        @media (min-width: 769px) {
+            .footer-contacts {
+                flex-direction: row; /* Alinha os itens horizontalmente em telas grandes */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer-contacts {
+                flex-direction: column; /* Empilha os itens verticalmente em telas menores */
+                gap: 10px; /* Reduz o espaço entre os itens */
+            }
+
+            .footer-contacts a {
+                font-size: 0.9rem; /* Ajusta o tamanho da fonte para telas menores */
+            }
+
+            .footer-contacts i {
+                font-size: 1rem; /* Ajusta o tamanho dos ícones para telas menores */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-contacts a {
+                font-size: 0.8rem; /* Reduz ainda mais o tamanho da fonte para telas muito pequenas */
+            }
+
+            .footer-contacts i {
+                font-size: 0.8rem; /* Reduz ainda mais o tamanho dos ícones para telas muito pequenas */
+            }
+        }
+    </style>
+    <!-- Adiciona Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar fixa no topo -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="imagensite/logo do site.png" alt="" class="logo-img">
+                <div class="logo-text">
+                    <span class="master">Master</span><span class="pag">Pag</span>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quem-somos.html">Quem Somos</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <img src="imagensite/icone de opcoes.png" alt="Menu" class="menu-icon">
+            </div>
+            <ul class="nav-links-mobile">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quem-somos.html">Quem Somos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Seção de Contato -->
+    <section class="sessao11-background">
+        <h2>Entre em Contato</h2>
+        <p>Entre em contato conosco para mais informações sobre nossos serviços. A MasterPag está aqui para ajudar com suas necessidades.&#8595;</p>
+    </section>
+
+    <!-- Navbar do rodapé -->
+    <footer>
+        <nav class="footer-navbar">
+            <ul class="footer-contacts">
+                <li>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:contato@kayoemnrl9@gmail.com">contato@kayoemnrl9@gmail.com</a>
+                </li>
+                <li>
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+558196282637">(81) 9628-2637</a>
+                </li>
+                <li>
+                    <i class="fab fa-whatsapp"></i>
+                    <a href="https://wa.me/558196282637">WhatsApp</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinksMobile = document.querySelector('.nav-links-mobile');
+
+            menuToggle.addEventListener('click', function () {
+                navLinksMobile.classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+</html>
 

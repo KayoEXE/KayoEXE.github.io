@@ -14,3 +14,4 @@ document.addEventListener('DOMContentLoaded', function () {
         navLinksMobile.classList.toggle('active');
     });
 });
+

@@ -308,7 +308,7 @@ p {
 
 /* Seção preta */
 .black-background {
-    background-color: #333333; /* Cor de fundo preta */
+    background-color: #050505; /* Cor de fundo preta */
     min-height: 100vh; /* Altura mínima igual à altura da viewport */
     display: flex;
     flex-direction: column; /* Alinha o conteúdo em coluna */
@@ -493,7 +493,7 @@ p {
 
 
 .dark-background {
-    background-color: #4d4d4d; /* Cor de fundo cinza escuro */
+    background-color: #0d0d0d; /* Cor de fundo cinza escuro */
     min-height: 100vh; /* Altura mínima igual à altura da viewport */
     display: flex; /* Utiliza Flexbox para alinhamento */
     flex-direction: row; /* Alinha os itens horizontalmente */
@@ -849,6 +849,438 @@ p {
 }
 
 
+
+
+
+
+.sessao-8 {
+    min-height: 100vh; /* Altura mínima igual à altura da viewport */
+    background-color: #0a0a0a; /* Cor de fundo mais escura */
+    display: flex; /* Utiliza Flexbox para alinhamento */
+    flex-direction: row; /* Alinha os itens horizontalmente */
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+    align-items: center; /* Centraliza os itens verticalmente */
+    padding: 20px; /* Espaçamento em todos os lados */
+    color: #ffffff; /* Cor do texto */
+    text-align: left; /* Alinha o texto à esquerda */
+    gap: 10px; /* Espaçamento entre elementos */
+    position: relative; /* Necessário para o posicionamento relativo do conteúdo */
+    padding-top: 60px; /* Ajusta o espaço superior para evitar sobreposição com a navbar */
+}
+
+/* Container de imagem */
+.sessao-8 .image-container {
+    max-width: 50%; /* Largura máxima do container de imagem em telas grandes */
+    margin-left: auto; /* Move a imagem para a direita */
+    margin-left: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px; /* Ajuste a margem superior conforme necessário */
+    /* margin-right: 0; Remove o espaçamento à direita */
+    transition: margin-left 0.3s ease; /* Transição suave ao mover a imagem */
+}
+
+/* Remove o padding do lado direito e define os cantos arredondados */
+.sessao-8 .image-container img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do container */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 15px; /* Cantos arredondados em telas grandes */
+}
+
+/* Container de texto */
+.sessao-8 .text-container {
+    max-width: 45%; /* Largura máxima do container de texto */
+    text-align: center; /* Centraliza o texto */
+    margin-left: 0; /* Remove o espaçamento à esquerda */
+    padding-left: 1px; /* Adiciona um pouco de padding à esquerda */
+}
+
+/* Título */
+.sessao-8 h1 {
+    font-size: 40px; /* Tamanho da fonte do título */
+    margin: 0; /* Remove margem para melhor alinhamento */
+    line-height: 1.2; /* Ajusta o espaçamento entre linhas */
+}
+
+/* Parágrafo */
+.sessao-8 p {
+    font-size: 18px; /* Tamanho da fonte do parágrafo */
+    margin: 5px 0; /* Reduz a margem para aproximar o texto */
+    line-height: 1.4; /* Ajusta o espaçamento entre linhas */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .sessao-8 {
+        flex-direction: column; /* Alinha o conteúdo em coluna */
+        justify-content: center; /* Centraliza o conteúdo verticalmente */
+        align-items: center; /* Centraliza o conteúdo horizontalmente */
+        padding: 20px; /* Adiciona algum espaçamento */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .sessao-8 .image-container {
+        max-width: 80%; /* Limita a largura da imagem */
+        margin-bottom: 20px; /* Espaço abaixo da imagem */
+        margin-left: 0; /* Remove margem lateral em telas menores */
+    }
+
+    .sessao-8 .text-container {
+        max-width: 80%; /* Limita a largura do texto */
+        margin: 0; /* Remove margem para centralizar o texto */
+    }
+
+    .sessao-8 h1 {
+        font-size: 32px; /* Ajusta o tamanho da fonte para telas menores */
+        margin-bottom: 10px; /* Espaço abaixo do título */
+    }
+
+    .sessao-8 p {
+        font-size: 16px; /* Ajusta o tamanho do parágrafo */
+        margin: 0; /* Remove margem adicional para melhor alinhamento */
+        text-align: center; /* Centraliza o texto */
+    }
+}
+
+@media (max-width: 480px) {
+    .sessao-8 {
+        padding: 10px; /* Ajusta o padding geral para telas menores */
+    }
+
+    .sessao-8 .image-container {
+        max-width: 100%; /* Limita a largura da imagem */
+        margin-bottom: 10px; /* Espaço abaixo da imagem */
+        margin-left: 0; /* Remove margem lateral em telas menores */
+    }
+
+    .sessao-8 .text-container {
+        max-width: 100%; /* Limita a largura do texto */
+    }
+
+    .sessao-8 h1 {
+        font-size: 24px; /* Ajusta o tamanho da fonte para telas menores */
+        margin-bottom: 5px; /* Espaço abaixo do título reduzido */
+    }
+
+    .sessao-8 p {
+        font-size: 14px; /* Ajusta o tamanho do parágrafo */
+        margin: 0; /* Remove margem adicional para melhor alinhamento */
+        text-align: center; /* Centraliza o texto */
+    }
+}
+
+
+
+
+
+
+
+
+.sessao-9 {
+    min-height: 100vh; /* Altura mínima igual à altura da viewport */
+    background-color: #080808; /* Cor de fundo mais escura que #0a0a0a */
+    display: flex; /* Utiliza Flexbox para alinhamento */
+    flex-direction: row; /* Alinha os itens horizontalmente */
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+    align-items: center; /* Centraliza os itens verticalmente */
+    padding: 20px; /* Espaçamento em todos os lados */
+    color: #ffffff; /* Cor do texto */
+    text-align: left; /* Alinha o texto à esquerda */
+    gap: 10px; /* Espaçamento entre elementos */
+    position: relative; /* Necessário para o posicionamento relativo do conteúdo */
+    padding-top: 60px; /* Ajusta o espaço superior para evitar sobreposição com a navbar */
+}
+
+/* Container de imagem para a seção 9 */
+.sessao-9 .image-container {
+    max-width: 35%; /* Largura máxima do container de imagem em telas grandes */
+    margin-left: auto; /* Move a imagem para a direita */
+    margin-left: 250px; /* Ajuste para posicionamento desejado */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px; /* Ajuste a margem superior conforme necessário */
+    transition: margin-left 0.3s ease; /* Transição suave ao mover a imagem */
+}
+
+.sessao-9 .image-container img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do container */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 15px; /* Cantos arredondados em telas grandes */
+    position: relative; /* Posicionamento relativo para deslocamento */
+    top: -25px; /* Desloca a imagem 20px para cima */
+}
+
+
+/* Container de texto para a seção 9 */
+.sessao-9 .text-container {
+    max-width: 45%; /* Largura máxima do container de texto */
+    text-align: center; /* Centraliza o texto */
+    margin-left: 0; /* Remove o espaçamento à esquerda */
+    padding-left: 1px; /* Adiciona um pouco de padding à esquerda */
+}
+
+/* Título para a seção 9 */
+.sessao-9 h1 {
+    font-size: 40px; /* Tamanho da fonte do título */
+    margin: 0; /* Remove margem para melhor alinhamento */
+    line-height: 1.2; /* Ajusta o espaçamento entre linhas */
+}
+
+/* Parágrafo para a seção 9 */
+.sessao-9 p {
+    font-size: 18px; /* Tamanho da fonte do parágrafo */
+    margin: 5px 0; /* Reduz a margem para aproximar o texto */
+    line-height: 1.4; /* Ajusta o espaçamento entre linhas */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .sessao-9 {
+        flex-direction: column; /* Alinha o conteúdo em coluna */
+        justify-content: center; /* Centraliza o conteúdo verticalmente */
+        align-items: center; /* Centraliza o conteúdo horizontalmente */
+        padding: 20px; /* Adiciona algum espaçamento */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .sessao-9 .image-container {
+        max-width: 80%; /* Limita a largura da imagem */
+        margin-bottom: 20px; /* Espaço abaixo da imagem */
+        margin-left: 0; /* Remove margem lateral em telas menores */
+    }
+
+    .sessao-9 .text-container {
+        max-width: 80%; /* Limita a largura do texto */
+        margin: 0; /* Remove margem para centralizar o texto */
+    }
+
+    .sessao-9 h1 {
+        font-size: 32px; /* Ajusta o tamanho da fonte para telas menores */
+        margin-bottom: 10px; /* Espaço abaixo do título */
+    }
+
+    .sessao-9 p {
+        font-size: 16px; /* Ajusta o tamanho do parágrafo */
+        margin: 0; /* Remove margem adicional para melhor alinhamento */
+        text-align: center; /* Centraliza o texto */
+    }
+}
+
+@media (max-width: 480px) {
+    .sessao-9 {
+        padding: 10px; /* Ajusta o padding geral para telas menores */
+    }
+
+    .sessao-9 .image-container {
+        max-width: 100%; /* Limita a largura da imagem */
+        margin-bottom: 10px; /* Espaço abaixo da imagem */
+        margin-left: 0; /* Remove margem lateral em telas menores */
+    }
+
+    .sessao-9 .text-container {
+        max-width: 100%; /* Limita a largura do texto */
+    }
+
+    .sessao-9 h1 {
+        font-size: 24px; /* Ajusta o tamanho da fonte para telas menores */
+        margin-bottom: 5px; /* Espaço abaixo do título reduzido */
+    }
+
+    .sessao-9 p {
+        font-size: 14px; /* Ajusta o tamanho do parágrafo */
+        margin: 0; /* Remove margem adicional para melhor alinhamento */
+        text-align: center; /* Centraliza o texto */
+    }
+}
+
+
+
+/* Nova seção 10 */
+.sessao10-background {
+    background-color: #e0e0e0; /* Mesma cor de fundo da seção cinza */
+    min-height: 100vh; /* Altura mínima igual à altura da viewport */
+    display: flex;
+    flex-direction: column; /* Empilha os elementos verticalmente */
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    padding: 20px; /* Adiciona algum espaçamento */
+    color: #010212; /* Cor do texto */
+    text-align: center; /* Alinha o texto ao centro */
+    box-sizing: border-box; /* Inclui o padding na largura e altura total */
+}
+
+.sessao10-background h2 {
+    font-size: 4vw; /* Tamanho da fonte do título ajustado para responsividade */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+.sessao10-background p {
+    font-size: 2.5vw; /* Tamanho da fonte do parágrafo ajustado para responsividade */
+    max-width: 90%; /* Limita a largura do texto */
+    margin: 0 auto; /* Centraliza o texto horizontalmente */
+    line-height: 1.4; /* Melhora a legibilidade */
+    box-sizing: border-box; /* Inclui o padding na largura e altura total */
+}
+
+/* Estilos adicionais para garantir a responsividade em dispositivos menores */
+@media (max-width: 768px) {
+    .sessao10-background h2 {
+        font-size: 5vw; /* Ajusta o tamanho do título para dispositivos menores */
+    }
+
+    .sessao10-background p {
+        font-size: 3.5vw; /* Ajusta o tamanho do parágrafo para dispositivos menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .sessao10-background h2 {
+        font-size: 6vw; /* Ajusta o tamanho do título para dispositivos muito pequenos */
+    }
+
+    .sessao10-background p {
+        font-size: 4.5vw; /* Ajusta o tamanho do parágrafo para dispositivos muito pequenos */
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Nova seção 10 */
+.sessao11-background {
+    background-color: #e0e0e0; /* Mesma cor de fundo da seção cinza */
+    min-height: 100vh; /* Altura mínima igual à altura da viewport */
+    display: flex;
+    flex-direction: column; /* Empilha os elementos verticalmente */
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    padding: 20px; /* Adiciona algum espaçamento */
+    color: #010212; /* Cor do texto */
+    text-align: center; /* Alinha o texto ao centro */
+    box-sizing: border-box; /* Inclui o padding na largura e altura total */
+    margin: 0; /* Remove margens adicionais */
+    padding-bottom: 0; /* Remove o padding inferior para evitar espaço extra */
+}
+
+.sessao11-background h2 {
+    font-size: 4vw; /* Tamanho da fonte do título ajustado para responsividade */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+.sessao11-background p {
+    font-size: 2.5vw; /* Tamanho da fonte do parágrafo ajustado para responsividade */
+    max-width: 90%; /* Limita a largura do texto */
+    margin: 0 auto; /* Centraliza o texto horizontalmente */
+    line-height: 1.4; /* Melhora a legibilidade */
+    box-sizing: border-box; /* Inclui o padding na largura e altura total */
+}
+
+/* Estilos adicionais para garantir a responsividade em dispositivos menores */
+@media (max-width: 768px) {
+    .sessao11-background h2 {
+        font-size: 5vw; /* Ajusta o tamanho do título para dispositivos menores */
+    }
+
+    .sessao11-background p {
+        font-size: 3.5vw; /* Ajusta o tamanho do parágrafo para dispositivos menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .sessao11-background h2 {
+        font-size: 6vw; /* Ajusta o tamanho do título para dispositivos muito pequenos */
+    }
+
+    .sessao11-background p {
+        font-size: 4.5vw; /* Ajusta o tamanho do parágrafo para dispositivos muito pequenos */
+    }
+}
+
+/* Estilo da navbar do rodapé */
+.footer-navbar {
+    background-color: #010212; /* Cor de fundo da navbar */
+    color: #e0e0e0; /* Cor do texto dos links */
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box; /* Inclui o padding na largura total */
+}
+
+.footer-contacts {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha se necessário */
+    gap: 15px; /* Espaço entre os itens */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Inclui o padding na largura total */
+    text-align: center; /* Centraliza o texto */
+}
+
+.footer-contacts div {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaço entre ícone e texto */
+}
+
+.footer-contacts a {
+    color: #e0e0e0; /* Cor dos links */
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-contacts a:hover {
+    color: #ffffff; /* Cor dos links ao passar o mouse */
+}
+
+.footer-contacts i {
+    font-size: 1.2rem; /* Tamanho dos ícones */
+}
+
+/* Media Queries para responsividade */
+@media (min-width: 769px) {
+    .footer-contacts {
+        flex-direction: row; /* Alinha os itens horizontalmente em telas grandes */
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-contacts {
+        flex-direction: column; /* Empilha os itens verticalmente em telas menores */
+        gap: 10px; /* Reduz o espaço entre os itens */
+    }
+
+    .footer-contacts a {
+        font-size: 0.9rem; /* Ajusta o tamanho da fonte para telas menores */
+    }
+
+    .footer-contacts i {
+        font-size: 1rem; /* Ajusta o tamanho dos ícones para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-contacts a {
+        font-size: 0.8rem; /* Reduz ainda mais o tamanho da fonte para telas muito pequenas */
+    }
+
+    .footer-contacts i {
+        font-size: 0.8rem; /* Reduz ainda mais o tamanho dos ícones para telas muito pequenas */
+    }
+}
 
 
 

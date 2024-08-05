@@ -1205,85 +1205,82 @@ p {
     }
 }
 
-/* Estilo da navbar do rodapé */
-.footer-navbar {
-    background-color: #010212; /* Cor de fundo da navbar */
-    color: #e0e0e0; /* Cor do texto dos links */
-    padding: 15px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    position: relative;
-    box-sizing: border-box; /* Inclui o padding na largura total */
-}
+        /* Estilo da navbar do rodapé */
+        .footer-navbar {
+            background-color: #010212; /* Cor de fundo da navbar */
+            color: #e0e0e0; /* Cor do texto dos links */
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            position: relative;
+            box-sizing: border-box; /* Inclui o padding na largura total */
+        }
 
-.footer-contacts {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap; /* Permite que os itens quebrem linha se necessário */
-    gap: 15px; /* Espaço entre os itens */
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box; /* Inclui o padding na largura total */
-    text-align: center; /* Centraliza o texto */
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    align-items: center; /* Centraliza os itens verticalmente */
-}
+        .footer-contacts {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap; /* Permite que os itens quebrem linha se necessário */
+            gap: 15px; /* Espaço entre os itens */
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box; /* Inclui o padding na largura total */
+            text-align: center; /* Centraliza o texto */
+        }
 
-.footer-contacts div {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Espaço entre ícone e texto */
-}
+        .footer-contacts div {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Espaço entre ícone e texto */
+        }
 
-.footer-contacts a {
-    color: #e0e0e0; /* Cor dos links */
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-}
+        .footer-contacts a {
+            color: #e0e0e0; /* Cor dos links */
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
 
-.footer-contacts a:hover {
-    color: #ffffff; /* Cor dos links ao passar o mouse */
-}
+        .footer-contacts a:hover {
+            color: #ffffff; /* Cor dos links ao passar o mouse */
+        }
 
-.footer-contacts i {
-    font-size: 1.2rem; /* Tamanho dos ícones */
-}
+        .footer-contacts i {
+            font-size: 1.2rem; /* Tamanho dos ícones */
+        }
 
-/* Media Queries para responsividade */
-@media (min-width: 769px) {
-    .footer-contacts {
-        flex-direction: row; /* Alinha os itens horizontalmente em telas grandes */
-    }
-}
+        /* Media Queries para responsividade */
+        @media (min-width: 769px) {
+            .footer-contacts {
+                flex-direction: row; /* Alinha os itens horizontalmente em telas grandes */
+            }
+        }
 
-@media (max-width: 768px) {
-    .footer-contacts {
-        flex-direction: column; /* Empilha os itens verticalmente em telas menores */
-        gap: 10px; /* Reduz o espaço entre os itens */
-    }
+        @media (max-width: 768px) {
+            .footer-contacts {
+                flex-direction: column; /* Empilha os itens verticalmente em telas menores */
+                gap: 10px; /* Reduz o espaço entre os itens */
+            }
 
-    .footer-contacts a {
-        font-size: 0.9rem; /* Ajusta o tamanho da fonte para telas menores */
-    }
+            .footer-contacts a {
+                font-size: 0.9rem; /* Ajusta o tamanho da fonte para telas menores */
+            }
 
-    .footer-contacts i {
-        font-size: 1rem; /* Ajusta o tamanho dos ícones para telas menores */
-    }
-}
+            .footer-contacts i {
+                font-size: 1rem; /* Ajusta o tamanho dos ícones para telas menores */
+            }
+        }
 
-@media (max-width: 480px) {
-    .footer-contacts a {
-        font-size: 0.8rem; /* Reduz ainda mais o tamanho da fonte para telas muito pequenas */
-    }
+        @media (max-width: 480px) {
+            .footer-contacts a {
+                font-size: 0.8rem; /* Reduz ainda mais o tamanho da fonte para telas muito pequenas */
+            }
 
-    .footer-contacts i {
-        font-size: 0.8rem; /* Reduz ainda mais o tamanho dos ícones para telas muito pequenas */
-    }
-}
-
+            .footer-contacts i {
+                font-size: 0.8rem; /* Reduz ainda mais o tamanho dos ícones para telas muito pequenas */
+            }
+        }
 
 
 

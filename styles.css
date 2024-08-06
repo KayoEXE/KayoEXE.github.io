@@ -243,7 +243,6 @@ p {
     margin-bottom: 20px;
 }
 
-/* Media Queries para responsividade */
 @media (max-width: 768px) {
     .nav-links {
         display: none; /* Esconde os links da navbar em telas menores */
@@ -254,7 +253,7 @@ p {
     }
 
     .hero-section {
-        padding-top: 20px; /* Ajusta o padding-top para telas pequenas */
+        padding-top: 80px; /* Aumenta o padding-top para criar mais espaço abaixo da navbar */
         display: flex;
         justify-content: center; /* Centraliza o conteúdo horizontalmente */
         align-items: center; /* Centraliza o conteúdo verticalmente */
@@ -262,24 +261,27 @@ p {
 
     .hero-content {
         flex-direction: column; /* Alinha o conteúdo em coluna */
+        gap: 20px; /* Ajusta o espaço entre o texto e o cartão */
     }
 
     .hero-text {
         text-align: center; /* Alinha o texto ao centro */
-        margin-bottom: 0; /* Remove a margem inferior */
+        margin-bottom: 10px; /* Adiciona algum espaço abaixo do texto para separar do cartão */
     }
 
     .card-and-click {
         flex-direction: column; /* Alinha o cartão e o texto "Clique" em coluna */
+        align-items: center; /* Centraliza os itens no eixo transversal */
     }
 
     .card {
-        margin: 20px 0; /* Adiciona margem ao redor do cartão */
+        margin: 10px 0; /* Reduz a margem ao redor do cartão para aproximá-lo do texto */
     }
 
     .click-text {
         position: static; /* Remove o posicionamento absoluto */
-        margin-top: 5px; /* Adiciona espaço acima do texto */
+        margin-top: 10px; /* Aumenta o espaço acima do texto para movê-lo mais perto do cartão */
+        margin-bottom: 0; /* Remove margem abaixo do texto se necessário */
         writing-mode: horizontal-tb; /* Ajusta o texto para orientação horizontal */
         text-align: center; /* Centraliza o texto */
     }
@@ -296,6 +298,18 @@ p {
 
     .logo-text {
         font-size: 20px; /* Reduz o tamanho da fonte */
+    }
+
+    .hero-section {
+        padding-top: 100px; /* Aumenta ainda mais o padding-top para criar mais espaço abaixo da navbar em telas muito pequenas */
+    }
+
+    .hero-text {
+        margin-bottom: 10px; /* Adiciona mais espaço abaixo do texto em telas menores */
+    }
+
+    .click-text {
+        margin-top: 10px; /* Ajusta o espaço acima do texto para movê-lo mais perto do cartão */
     }
 }
 

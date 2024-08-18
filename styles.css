@@ -167,6 +167,19 @@ body {
     position: relative; /* Necessário para o posicionamento do texto "Clique" */
 }
 
+#rotate-btn {
+    background: none; /* Remove o fundo do botão */
+    border: none; /* Remove a borda do botão */
+    padding: 0; /* Remove o espaçamento interno do botão */
+    font: inherit; /* Usa a fonte do elemento pai */
+    cursor: pointer; /* Adiciona o cursor de ponteiro */
+    outline: none; /* Remove a borda de foco */
+    color: #000; /* Define a cor do texto */
+    display: inline; /* Garante que o botão não quebre a linha */
+    text-align: center; /* Centraliza o texto */
+}
+
+
 .card-container {
     display: flex;
     justify-content: center; /* Centraliza o cartão horizontalmente */
@@ -227,6 +240,8 @@ body {
     transform: translateY(-50%); /* Ajusta a posição vertical do texto */
     writing-mode: vertical-rl; /* Orienta o texto verticalmente */
     text-align: center; /* Alinha o texto ao centro */
+    width: auto; /* Ajuste para garantir que o texto tenha o espaço necessário */
+    overflow: visible; /* Garante que o texto não seja cortado */
 }
 
 /* Ajustes para conteúdo */
@@ -272,10 +287,11 @@ p {
     .card-and-click {
         flex-direction: column; /* Alinha o cartão e o texto "Clique" em coluna */
         align-items: center; /* Centraliza os itens no eixo transversal */
+        margin-right: 60px;
     }
 
     .card {
-        margin: 10px 0; /* Reduz a margem ao redor do cartão para aproximá-lo do texto */
+       margin-left: 60px;
     }
 
     .click-text {
@@ -309,9 +325,11 @@ p {
     }
 
     .click-text {
-        margin-top: 10px; /* Ajusta o espaço acima do texto para movê-lo mais perto do cartão */
-    }
+        margin-top: 5px;
+        margin-left: 60px; 
+    }   
 }
+
 
 
 
@@ -508,7 +526,7 @@ p {
 
 .dark-background {
     background-color: #0d0d0d; /* Cor de fundo cinza escuro */
-    min-height: 100vh; /* Altura mínima igual à altura da viewport */
+    min-height: 120vh; /* Altura mínima igual à altura da viewport */
     display: flex; /* Utiliza Flexbox para alinhamento */
     flex-direction: row; /* Alinha os itens horizontalmente */
     justify-content: flex-start; /* Alinha os itens à esquerda */
@@ -516,13 +534,13 @@ p {
     padding: 20px; /* Espaçamento em todos os lados */
     color: #ffffff; /* Cor do texto */
     text-align: left; /* Alinha o texto à esquerda */
-    gap: 10px; /* Espaçamento entre elementos */
+    gap: 60px; /* Espaçamento entre elementos */
 }
 
 /* Container de imagem */
 .image-container {
     max-width: 40%; /* Largura máxima do container de imagem */
-    margin-left: 10px; /* Espaço reduzido entre a imagem e o texto */
+    margin-left: 40px; /* Espaço reduzido entre a imagem e o texto */
     display: flex;
     justify-content: center;
     align-items: center;

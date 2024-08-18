@@ -15,3 +15,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+document.getElementById('rotate-btn').addEventListener('click', function() {
+    const card = document.querySelector('.card');
+    card.classList.toggle('flip');
+});
+
+

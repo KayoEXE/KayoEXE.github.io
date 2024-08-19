@@ -299,7 +299,8 @@ p {
         margin-top: 10px; /* Aumenta o espaço acima do texto para movê-lo mais perto do cartão */
         margin-bottom: 0; /* Remove margem abaixo do texto se necessário */
         writing-mode: horizontal-tb; /* Ajusta o texto para orientação horizontal */
-        text-align: center; /* Centraliza o texto */
+        padding-left: 55px;
+        display:flex;
     }
 }
 
@@ -326,7 +327,8 @@ p {
 
     .click-text {
         margin-top: 5px;
-        margin-left: 60px; 
+        display: flex;
+        padding-right: 5px;
     }   
 }
 
@@ -877,6 +879,8 @@ p {
         font-size: 14px; /* Ajusta o tamanho do parágrafo */
         margin: 0; /* Remove margem adicional para melhor alinhamento */
         text-align: center; /* Centraliza o texto */
+
+        
     }
 }
 
